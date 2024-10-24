@@ -109,7 +109,7 @@ Para ejecutar el proyecto localmente, sigue los siguientes pasos:
 
    ```npm run dev```
 
-3. Abre el navegador y acceda a `http://localhost:3000`.
+3. Abre el navegador y acceda a `http://localhost:5173`.
 
 ## Colaboradores
 
