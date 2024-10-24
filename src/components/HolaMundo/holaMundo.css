@@ -1,0 +1,3 @@
+.holaMundo {
+  @apply text-center text-4xl font-bold text-red-500;
+}
