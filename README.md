@@ -26,7 +26,8 @@ Los componentes se crean en la carpeta `components` y están diseñados para ser
    export { default as Header } from "./Header";
    export { default as Footer } from "./Footer";
    ```
-De esta manera, podrás importar los componentes en cualquier parte del proyecto de la siguiente forma:
+
+   De esta manera, podrás importar los componentes en cualquier parte del proyecto de la siguiente forma:
 
 ```js
 import { Header, Footer } from "../components";
@@ -87,30 +88,91 @@ Las páginas se crean en la carpeta `pages` y están diseñadas para ser reutili
    }
    ```
 
+## Reglas para el manejo de ramas
+
+El proyecto utiliza un flujo de trabajo basado en ramas para facilitar el desarrollo colaborativo y asegurar que el código en `main` siempre esté estable. Las ramas se organizan de la siguiente forma:
+
+- **`main`**: Es la rama principal del proyecto y debe contener únicamente el código en producción. No se debe hacer ningún commit directo en `main`.
+
+- **`develop`**: Es la rama de desarrollo principal, donde se integran los cambios de todas las ramas de los colaboradores. Solo se permite hacer merge de las ramas personales cuando los cambios estén completos y probados.
+
+- **Ramas personales (`angel`, `ramses`, `glen`)**: Cada colaborador tiene su propia rama donde debe trabajar de manera independiente. Los colaboradores pueden hacer commits y experimentar en sus respectivas ramas siempre que no se esté trabajando en conjunto con otros.
+
+### Proceso para hacer commits en sus ramas
+
+1. **Asegúrate de estar en tu rama personal**: Antes de comenzar a hacer cambios, verifica que estés en tu rama. Puedes cambiar a tu rama con el siguiente comando:
+
+   ```bash
+   git checkout angel
+   ```
+
+   (Reemplaza angel con el nombre de tu rama si eres otro colaborador).
+
+2. **Agrega los cambios a tu área de preparación**: Antes de hacer un commit, asegúrate de que estés en tu rama y que los cambios estén en el directorio actual.
+
+3. **Crea un commit**: Cuando hayas terminado de hacer los cambios y estés seguro de que están bien, crea un commit con el siguiente comando:
+
+   ```bash
+   git add .
+   git commit -m "Descripción del cambio"
+   ```
+
+4. **Push a tus cambios**: Después de crear el commit, pusha tus cambios a tu rama con el siguiente comando:
+
+   ```bash
+   git push origin angel
+   ```
+
+   (Reemplaza angel con el nombre de tu rama si eres otro colaborador).
+
+5. **Preparación para la fusión (merge)**: Cuando estés listo para fusionar tus cambios en develop, asegúrate de hacer un pull de develop primero para evitar conflictos:
+
+   ```bash
+   git checkout develop
+   git pull origin develop
+   ```
+
+   Luego, vuelve a tu rama y fusiona develop en tu rama:
+
+   ```bash
+   git checkout angel
+   git merge develop
+   ```
+
 ## Comandos
 
 Para clonar el proyecto desde el repositorio, sigue los siguientes pasos:
 
 1. Clona el repositorio en tu máquina:
 
-   ```git clone https://github.com/angeljpeg/utn-pagina.git```
+   ```bash
+   git clone https://github.com/angeljpeg/utn-pagina.git
+   ```
 
 2. Entra en la carpeta del proyecto:
 
-   ```cd utn-pagina```
+   ```bash
+      cd utn-pagina
+   ```
 
 Para ejecutar el proyecto localmente, sigue los siguientes pasos:
 
 1. Instala las dependencias necesarias:
 
-   ```npm install```
-   
+   ```bash
+      npm install
+   ```
+
 2. Ejecuta el servidor de desarrollo:
 
-   ```npm run dev```
+   ```bash
+      npm run dev
+   ```
 
 3. Abre el navegador y acceda a `http://localhost:5173`.
 
 ## Colaboradores
 
-- [Angel Gonzalez](https://github.com/angeljpeg)
+- [Alexis Gonzalez](https://github.com/angeljpeg)
+- [Garib Quen](https://github.com/suputmadreloco)
+- [Glen Valenzuela](https://github.com/suputamadrepordosloco)
