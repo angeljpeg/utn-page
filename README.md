@@ -3,7 +3,12 @@
 
 Esta es una propuesta para la pagina web de la Universidad Tecnologica de Nogales.
 
+# Rama: Desarrollo
 
+## Descripción
+
+Aqui se creará una página web para la Universidad Tecnologica de Nogales. Se trabajará con React y Tailwind CSS.
+Para despues de la rama de desarrollo se creará una rama de producción.
 
 
 ## Instalacion
