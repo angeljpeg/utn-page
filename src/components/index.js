@@ -1,2 +1,4 @@
-export {ScrollToUpButton} from "./ScrollToUpButton";
-export {Footer} from "./Footer";
+export { ScrollToUpButton } from "./ScrollToUpButton";
+export { Footer } from "./Footer";
+export { PDFRender } from "./PDFRender";
+export { Header } from "./Header";
