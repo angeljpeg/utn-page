@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 // Components
-import { ScrollToUpButton } from "../components";
+import { ScrollToUpButton, Footer } from "../components";
 
 export function RootLayout() {
   return (
@@ -12,14 +12,13 @@ export function RootLayout() {
       </header>
       
       {/* Este es el lugar donde las rutas se renderizarán */}
-      <main>
+      <main className='min-h-screen pb-24'>
         <Outlet />
         <ScrollToUpButton />
       </main>
 
-      <footer>
-        <p>&copy; 2023 Mi Aplicación</p>
-      </footer>
+      {/* Pie de Pagina de la Paginas */}
+      <Footer />
     </div>
   );
 }

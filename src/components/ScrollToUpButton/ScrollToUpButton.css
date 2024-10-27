@@ -9,7 +9,7 @@
     @apply py-2 px-2;
 
     /* Shape */
-    @apply rounded-full border-4 border-primary-700 shadow shadow-black;
+    @apply rounded-full border-2 border-primary-700 shadow shadow-black;
 
     /* Position */
     @apply fixed right-20 bottom-20;
