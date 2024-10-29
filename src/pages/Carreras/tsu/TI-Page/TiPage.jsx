@@ -1,7 +1,6 @@
 
 //Componets
-
-import {PDFRender, Header} from "../../../../components"
+import {PDFRender, Header} from "@components"
 
 export function TiPage() {
   return (
