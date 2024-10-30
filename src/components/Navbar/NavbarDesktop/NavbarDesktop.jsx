@@ -1,21 +1,22 @@
+import "./NavBarDesktop.css";
+
+// DATA
+import { NavbarItems } from "../data";
+
+// COMPONENTS
+import { Menu } from "./Components";
+import { Link } from "react-router-dom";
+
 export function NavbarDesktop() {
   return (
-    <div className="flex flex-row items-center justify-between px-4 py-2">
-      <div className="h-full w-36">
-        {/* Aquí puedes insertar tu logo */}
-        <img src="/utn.svg" alt="logo utn" className="w-full"/>
+    <div className="NavBarDesktop">
+      <div className="NavBarLogo">
+        <Link to="/">
+          <img src="/utn.svg" alt="logo utn" className="w-full cursor-pointer" />
+        </Link>
       </div>
-      <ul className="flex flex-row space-x-4">
-        <li>hsad</li>
-        <li>hsad</li>
-        <li>hsad</li>
-        <li>hsad</li>
-        <li>hsad</li>
-        <li>hsad</li>
-      </ul>
-      <div>
-        contacto
-      </div>
+      <Menu items={NavbarItems} />
+      <div>Contacto</div>
     </div>
   );
 }

@@ -5,6 +5,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import "./app.css";
+
+// Context
+import { CurrentLocationProvider } from "@context";
+
 // Layouts
 import { RootLayout, CarrerasLayout } from "./layouts";
 
@@ -16,9 +21,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       {/* Rutas de inicio */}
-      <Route index element={<HomePage />}></Route>
-
-
+      <Route index element={<HomePage />} />
 
       {/* Rutas de las carreras */}
       <Route path="technologias-de-la-informacion" element={<TiPage />} />
@@ -39,7 +42,13 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router}>
+      <CurrentLocationProvider>
+        <></>
+      </CurrentLocationProvider>
+    </RouterProvider>
+  );
 }
 
 export default App;

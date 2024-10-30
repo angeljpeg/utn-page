@@ -30,7 +30,10 @@ export default {
           900: "#70321e",
           950: "#3c170e",
         },
-        }
+      },
+      fontFamily: {
+        poppins: ["Poppins", "roboto"],
+      },
     },
   },
   plugins: [],

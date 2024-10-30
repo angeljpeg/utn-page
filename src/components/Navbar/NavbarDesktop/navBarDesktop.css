@@ -1,0 +1,32 @@
+.NavBarDesktop {
+  @apply flex flex-row items-center justify-between px-4;
+}
+
+.NavBarLogo {
+  @apply h-full w-36;
+}
+
+.menu-list {
+  @apply flex flex-row space-x-4;
+}
+
+.menu-list li {
+  @apply px-2 py-2 text-sm font-semibold transition-all duration-100 ease-in border-b-4 border-transparent cursor-pointer hover:border-primary-100;
+
+  /* Agrega el borde activo aquí si es necesario */
+  &.active {
+    @apply border-primary-500; /* Agrega la clase para el estado activo */
+  }
+}
+
+.submenu {
+  position: relative; /* Define el estilo aquí en lugar de usar @apply */
+}
+
+.submenu-dropdown {
+  @apply absolute left-0 px-2 py-3 mt-3 transition-all duration-300 ease-in-out transform opacity-0 bg-slate-50 top-full; /* No usar group aquí */
+}
+
+.submenu-item {
+  @apply flex items-center;
+}
