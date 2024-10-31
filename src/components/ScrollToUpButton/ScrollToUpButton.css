@@ -1,0 +1,27 @@
+.ScrollToUpButton {
+    /* Colors */
+    @apply bg-primary-500;
+
+    /* Font */
+    @apply font-bold text-white;
+
+    /* Size */
+    @apply py-2 px-2;
+
+    /* Shape */
+    @apply rounded-full border-2 border-primary-500 shadow shadow-black;
+
+    /* Position */
+    @apply fixed right-20 bottom-20;
+
+    /* Transitions */
+    @apply transition-all duration-300 ease-in-out;
+}
+
+.ScrollToUpButton:hover {
+    @apply bg-transparent text-primary-500;
+}
+
+.ScrollToUpButton:active {
+    @apply bg-primary text-white scale-125 border-primary;
+}
