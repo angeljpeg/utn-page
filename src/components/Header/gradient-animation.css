@@ -1,0 +1,14 @@
+@keyframes gradient-move-infinite {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(to bottom right,#a3e635,#22c55e,#a3e635);
+  background-size: 300% 300%; /* tamaño mayor para desplazamiento suave */
+  animation: gradient-move-infinite 10s infinite alternate;
+}
