@@ -9,6 +9,7 @@ const CurrentLocationContext = createContext();
 // Proveedor del contexto
 export const CurrentLocationProvider = ({ children }) => {
   const location = useLocation(); // Debe estar dentro de un Router
+  console.log(location)
   const [currentLocation, setCurrentLocation] = useState(location.pathname); // Inicializa el estado
 
   useEffect(() => {

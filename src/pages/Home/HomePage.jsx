@@ -1,6 +1,6 @@
 export function HomePage() {
   return (
-    <div>
+    <section className="bg-white">
       HomePage
       <h1>Hello UTN-Page</h1>
       <p>
@@ -87,6 +87,6 @@ export function HomePage() {
         sit amet maxime aliquid ipsa reprehenderit tenetur provident ipsum
         magnam cum, doloribus saepe nobis eligendi minima? Tenetur, nulla.
       </p>
-    </div>
+    </section>
   );
 }

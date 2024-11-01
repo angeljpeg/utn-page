@@ -7,7 +7,7 @@ export function RootLayout() {
   return (
     <div>
       {/* Barra de navegacion de la pagina */}
-      <nav>
+      <nav className='sticky top-0'>
         <Navbar />
       </nav>
       
