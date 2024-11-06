@@ -4,7 +4,7 @@ import { Submenu } from "./Submenu";
 
 export function Menu({ items }) {
   return (
-    <ul className="flex flex-col gap-1 px-3 text-lg font-semibold">
+    <ul className="flex flex-col gap-1 px-2 py-4 text-lg font-semibold">
       <li>
         <Link to="/">INICIO</Link>
       </li>

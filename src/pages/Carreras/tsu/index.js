@@ -1,1 +1,1 @@
-export * from "./TI-Page";
+export {TiPage} from "./TI-Page";
