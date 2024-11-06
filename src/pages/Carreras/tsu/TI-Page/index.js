@@ -1,1 +1,0 @@
-export { TiPage } from "./TiPage";
