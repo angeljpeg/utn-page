@@ -7,9 +7,7 @@ export function RootLayout() {
   return (
     <div>
       {/* Barra de navegacion de la pagina */}
-      <nav className='sticky top-0'>
-        <Navbar />
-      </nav>
+      <Navbar />
       
       {/* Este es el lugar donde las rutas se renderizarán */}
       <main className='min-h-screen pb-24'>
