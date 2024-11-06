@@ -53,7 +53,7 @@ Para trabajar en este proyecto les recomiendo las siguientes extensiones de VS C
 
 - Angel: Quitar la sombra del navbar
 
-- Garib: Crear el archivo de data, ademas de la interfaz de las carrera con sus respectivos componentes
+- Garib: 1.- Crear el archivo de data, ademas de la interfaz de las carrera con sus respectivos componentes. ¿Animación de fondo en las materias?
 
 ## Colaboradores
 
