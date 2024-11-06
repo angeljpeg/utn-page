@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 
 // Components
-import { NavbarDesktop } from "./NavbarDesktop"
-import { NavbarMobile } from "./NavbarMobile"
+import { NavbarDesktop } from "./NavbarDesktop";
+import { NavbarMobile } from "./NavbarMobile";
 
 export function Navbar() {
   const [navbarBg, setNavbarBg] = useState("bg-transparent");
