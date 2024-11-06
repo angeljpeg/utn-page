@@ -14,7 +14,7 @@ import { CurrentLocationProvider } from "@context";
 import { RootLayout, CarrerasLayout } from "./layouts";
 
 // Pages
-import { HomePage, TiPage } from "./pages";
+import { HomePage,  CarrerasPage} from "./pages";
 
 // Define routes
 const router = createBrowserRouter(
@@ -24,15 +24,9 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
 
       {/* Rutas de las carreras */}
-      <Route path="technologias-de-la-informacion" element={<TiPage />} />
+      <Route path="technologias-de-la-informacion" element={<CarrerasPage />} />
       <Route path="carreras" element={<CarrerasLayout />}>
         <Route index element={<h1>Carreras</h1>} />
-        {/* Rutas de TSU */}
-        <Route path="tsu">
-          <Route path="hola" element={<TiPage />} />
-        </Route>
-        {/* Rutas de Ingeniería */}
-        <Route path="ingenieria" element={<h1>Ingeniería</h1>} />
       </Route>
 
       {/* Otras rutas */}
