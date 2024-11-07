@@ -10,7 +10,7 @@ export function RootLayout() {
       <Navbar />
       
       {/* Este es el lugar donde las rutas se renderizarán */}
-      <main className="min-h-screen pb-24">
+      <main className="min-h-screen pt-24 pb-24">
         <Outlet />
         <ScrollToUpButton />
       </main>

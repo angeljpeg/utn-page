@@ -4,19 +4,12 @@ import "./NavBarDesktop.css";
 import { NavbarItems } from "../data";
 
 // COMPONENTS
-import { Menu } from "./Components";
 import { Link } from "react-router-dom";
 
 export function NavbarDesktop() {
   return (
-    <div className="NavBarDesktop">
-      <div className="NavBarLogo">
-        <Link to="/">
-          <img src="/utn.svg" alt="logo utn" className="w-full cursor-pointer" />
-        </Link>
-      </div>
-      <Menu items={NavbarItems} />
-      <div>Contacto</div>
+    <div className="flex items-center justify-between px-6 py-4 text-white bg-blue-900">
+      
     </div>
   );
 }

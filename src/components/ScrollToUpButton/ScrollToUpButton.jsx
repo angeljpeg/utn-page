@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import "./ScrollToUpButton.css";
 import { IoCaretUp } from "react-icons/io5";
 
 export function ScrollToUpButton() {
-  const [active, setActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
-        setActive(true);
+        setIsActive(true);
       } else {
-        setActive(false);
+        setIsActive(false);
       }
     });
   }, []);
@@ -24,10 +24,20 @@ export function ScrollToUpButton() {
   };
 
   return (
-    <div>
-      <button className={`ScrollToUpButton ${active ? "opacity-100" : "opacity-0"}`} onClick={handleScrollToTop}>
-        <IoCaretUp className="w-6 h-6" />
-      </button>
-    </div>
+    <AnimatePresence>
+      {isActive && (
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          exit={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          className="fixed z-50 flex items-center justify-center p-3 text-white rounded-full cursor-pointer bottom-10 right-6 bg-primary-500"
+          onClick={handleScrollToTop}
+        >
+          <IoCaretUp className="w-6 h-6" />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
