@@ -10,7 +10,7 @@ import {
 
 import {Header} from "@components"
 
-export function CarrerasPage() {
+export default function CarrerasPage() {
   // ID de carrera, aquí en el ejemplo es 0 para "Tecnologías de la información"
   const link = 0;
 

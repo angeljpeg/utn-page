@@ -22,7 +22,7 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed inset-0 flex items-center h-24 text-sm transition-all duration-500 ease-in-out ${headerBgClass}`}
+        className={`fixed inset-0 flex items-center h-24 text-sm transition-all duration-500 ease-in-out ${headerBgClass} z-[100]`}
       >
         <nav className="px-3.5 flex justify-between items-center w-full max-w-7xl mx-auto">
           <div className="z-50 flex items-center gap-x-3">

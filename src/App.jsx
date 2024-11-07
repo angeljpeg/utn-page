@@ -5,6 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import { lazy } from "react";
+
 import "./app.css";
 
 // Context
@@ -14,7 +16,9 @@ import { CurrentLocationProvider } from "@context";
 import { RootLayout, CarrerasLayout } from "./layouts";
 
 // Pages
-import { HomePage,  CarrerasPage} from "./pages";
+
+const HomePage = lazy(() => import("./pages/Home/HomePage"));
+const CarrerasPage = lazy(() => import("./pages/Carreras/CarrerasPage"));
 
 // Define routes
 const router = createBrowserRouter(

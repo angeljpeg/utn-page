@@ -1,1 +1,1 @@
-export {CarrerasPage} from "./CarrerasPage";
+export * from "./CarrerasPage";
