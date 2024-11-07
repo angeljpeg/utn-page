@@ -5,47 +5,56 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { lazy } from "react";
+import { Suspense } from "react";
 
 import "./app.css";
 
-// Context
-import { CurrentLocationProvider } from "@context";
-
 // Layouts
-import { RootLayout, CarrerasLayout } from "./layouts";
+import { RootLayout } from "./layouts";
 
 // Pages
-
-const HomePage = lazy(() => import("./pages/Home/HomePage"));
-const CarrerasPage = lazy(() => import("./pages/Carreras/CarrerasPage"));
+import { HomePage, CarrerasPage } from "./pages"
 
 // Define routes
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-      {/* Rutas de inicio */}
-      <Route index element={<HomePage />} />
+    <Route
+      path="/"
+      element={
+        <Suspense fallback={<div>Cargando aplicación...</div>}>
+          <RootLayout />
+        </Suspense>
+      }
+    >
+      {/* Ruta de inicio */}
+      <Route
+        index
+        element={
+          <Suspense fallback={<div>Cargando página de inicio...</div>}>
+            <HomePage />
+          </Suspense>
+        }
+      />
 
       {/* Rutas de las carreras */}
-      <Route path="technologias-de-la-informacion" element={<CarrerasPage />} />
-      <Route path="carreras" element={<CarrerasLayout />}>
-        <Route index element={<h1>Carreras</h1>} />
-      </Route>
+        <Route
+          path="/carrera/:carreraId"
+          element={
+            <Suspense fallback={<div>Cargando detalles de la carrera...</div>}>
+              <CarrerasPage />
+            </Suspense>
+          }
+        />
 
-      {/* Otras rutas */}
-      <Route path="*" element={<h1>404</h1>} />
+      {/* Ruta 404 */}
+      <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
     </Route>
   )
 );
 
 function App() {
   return (
-    <RouterProvider router={router}>
-      <CurrentLocationProvider>
-        <></>
-      </CurrentLocationProvider>
-    </RouterProvider>
+    <RouterProvider router={router} />
   );
 }
 

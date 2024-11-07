@@ -1,2 +1,2 @@
-export * from "./Home";
-export * from "./Carreras";
+export {HomePage} from "./Home";
+export {CarrerasPage} from "./Carreras";

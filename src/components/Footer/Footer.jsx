@@ -2,7 +2,7 @@ import "./Footer.css";
 
 import { Copyright, Links, Contacto, Info } from "./components";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="flex flex-col items-center justify-center w-full footer">
       {/* Información de la Universidad */}

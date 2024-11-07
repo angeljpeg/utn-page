@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { IoCaretUp } from "react-icons/io5";
 
-export function ScrollToUpButton() {
+export default function ScrollToUpButton() {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
