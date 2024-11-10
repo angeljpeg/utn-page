@@ -1,6 +1,9 @@
-import { Header } from "@components";
+// Componets
 
-export default function HomePage() {
+import { Header } from "@components";
+import { NuevoModeloEducativoGrid } from "./Components";
+
+export default function OfertaEducativaPage() {
   return (
     <section className="w-full">
       <div className="relative w-full h-[50vh]">
@@ -14,12 +17,12 @@ export default function HomePage() {
       </div>
 
       <div className="absolute text-center transform -translate-x-1/2 -translate-y-1/2 left-1/2">
-        <Header title="UNIVERSIDAD TECNOLOGICA DE NOGALES" />
+        <Header title="OFERTA EDUCATIVA" />
       </div>
 
-      <main className="min-h-screen py-24">
-      contenido
-      </main>
+      <section className="py-24">
+        <NuevoModeloEducativoGrid />
+      </section>
     </section>
   );
 }

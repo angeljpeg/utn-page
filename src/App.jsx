@@ -1,22 +1,20 @@
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
+  BrowserRouter as Router
 } from "react-router-dom";
 
 import { Suspense } from "react";
 
 import "./app.css";
+import { AppRouter } from "./Router";
 
 // Layouts
-import { RootLayout } from "./layouts";
-
+/* import { RootLayout } from "./layouts";
+ */
 // Pages
-import { HomePage, CarrerasPage } from "./pages"
-
+/* import { HomePage, CarrerasPage } from "./pages"
+ */
 // Define routes
-const router = createBrowserRouter(
+/* const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
       path="/"
@@ -26,7 +24,6 @@ const router = createBrowserRouter(
         </Suspense>
       }
     >
-      {/* Ruta de inicio */}
       <Route
         index
         element={
@@ -36,7 +33,6 @@ const router = createBrowserRouter(
         }
       />
 
-      {/* Rutas de las carreras */}
         <Route
           path="/carrera/:carreraId"
           element={
@@ -46,15 +42,18 @@ const router = createBrowserRouter(
           }
         />
 
-      {/* Ruta 404 */}
       <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
     </Route>
   )
-);
+); */
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Router>
+      <Suspense fallback={<div>Cargando Pagina</div>}>
+        <AppRouter />
+      </Suspense>
+    </Router>
   );
 }
 

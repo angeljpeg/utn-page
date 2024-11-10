@@ -1,31 +1,74 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
-export function SubjectsList({ title, quarters }) {
+export default function SubjectsList({ title, quarters }) {
+  const [activeIndex, setActiveIndex] = useState(null); // Estado para manejar el acordeón
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index); // Alterna la expansión y contracción
+  };
+
   return (
-    <div className="w-full py-6 h-fit">
+    <section className="w-full py-6 cursor-default h-fit">
       <div className="w-full px-4 mx-auto sm:px-6 lg:px-8">
-        <h2 className="mt-8 mb-6 text-2xl font-normal text-center text-stone-700 sm:text-3xl">
+        <h2 className="mt-8 mb-6 text-2xl font-semibold text-center text-green-600 sm:text-3xl">
           {title}
         </h2>
         <ul className="grid grid-cols-1 gap-4 text-gray-800 sm:gap-6 justify-items-stretch md:grid-cols-2 lg:grid-cols-3">
           {quarters.map((quarter, quarterIndex) => (
             <li key={quarterIndex} className="flex w-full h-full">
-              <ul className="flex flex-col w-full h-full p-4 bg-gray-100 rounded-lg">
-                {quarter.subjects.map((subject, index) => (
-                  <li key={index} className="flex items-center mb-2">
-                    {index === 0 ? (
-                      <h2 className="mb-2 text-lg font-semibold">{subject}</h2>
-                    ) : (
-                      <span className="flex-1 text-base">{subject}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <motion.div
+                className="w-full"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: quarterIndex * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div
+                  className="flex items-center justify-between p-4 bg-gray-100 rounded-lg shadow-md cursor-pointer hover:shadow-lg"
+                  onClick={() => toggleAccordion(quarterIndex)} // Maneja el clic para alternar
+                >
+                  <h3 className="text-lg font-semibold">{`Cuatrimestre ${quarterIndex + 1}`}</h3> {/* Título con el número del cuatrimestre */}
+                  <span>{activeIndex === quarterIndex ? '-' : '+'}</span> {/* Muestra + o - según el estado */}
+                </div>
+                <motion.div
+                  className="overflow-hidden bg-gray-50"
+                  initial={{ height: 0 }}
+                  animate={{
+                    height: activeIndex === quarterIndex ? "auto" : 0, // Alterna entre auto y 0
+                  }}
+                  transition={{ duration: 0.3 }} // Duración de la animación
+                >
+                  <motion.ul
+                    className="flex flex-col p-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {quarter.subjects.map((subject, index) => (
+                      <motion.li
+                        key={index}
+                        className="flex items-center mb-2"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: index * 0.1, duration: 0.2 }}
+                      >
+                        {index === 0 ? (
+                          <h2 className="mb-2 text-lg font-semibold">{subject}</h2>
+                        ) : (
+                          <span className="flex-1 text-base">{subject}</span>
+                        )}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </motion.div>
+              </motion.div>
             </li>
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 }
 

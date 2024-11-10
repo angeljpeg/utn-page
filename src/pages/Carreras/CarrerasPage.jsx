@@ -1,14 +1,9 @@
 import { degrees, actionFields } from "./data/degreeInformation";
 
-
 // Components
-import {
-  ActionFields,
-  DegreeCompetencies,
-  SubjectsList,
-} from "./components";
+import { ActionFields, DegreeCompetencies, SubjectsList } from "./components";
 
-import {Header} from "@components"
+import { Header } from "@components";
 
 export default function CarrerasPage() {
   // ID de carrera, aquí en el ejemplo es 0 para "Tecnologías de la información"
@@ -25,35 +20,38 @@ export default function CarrerasPage() {
   if (!degreeTSU || !degreeING || !actionField) return null;
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen pt-20 pb-10">
-      <Header title={`TSU en ${degreeTSU.title}`} />
+    <>
+      <div className="absolute text-center transform -translate-x-1/2 -translate-y-1/2 left-1/2">
+        <Header title={`TSU en ${degreeTSU.title}`} />
+      </div>
+      <section className="flex flex-col items-center justify-center w-full min-h-screen pt-20 pb-10">
+        <DegreeCompetencies
+          title={degreeTSU.title}
+          area={degreeTSU.area}
+          competencies={degreeTSU.competencies}
+          isTSU={true}
+        />
 
-      <DegreeCompetencies
-        title={degreeTSU.title}
-        area={degreeTSU.area}
-        competencies={degreeTSU.competencies}
-        isTSU={true}
-      />
+        <DegreeCompetencies
+          title={degreeING.title}
+          competencies={degreeING.competencies}
+          isTSU={false}
+        />
 
-      <DegreeCompetencies
-        title={degreeING.title}
-        competencies={degreeING.competencies}
-        isTSU={false}
-      />
+        <ActionFields fields={actionField.actionFields} />
 
-      <ActionFields fields={actionField.actionFields} />
+        <SubjectsList
+          title={`TSU en ${degreeTSU.title}, Área ${degreeTSU.area}`}
+          quarters={degreeTSU.quarters}
+        />
 
-      <SubjectsList
-        title={`TSU en ${degreeTSU.title}, Área ${degreeTSU.area}`}
-        quarters={degreeTSU.quarters}
-      />
-
-      <SubjectsList
-        title={`${
-          degreeING.type === "ing" ? "Ingeniería" : "Licenciatura"
-        } en ${degreeING.title}`}
-        quarters={degreeING.quarters}
-      />
-    </div>
+        <SubjectsList
+          title={`${
+            degreeING.type === "ing" ? "Ingeniería" : "Licenciatura"
+          } en ${degreeING.title}`}
+          quarters={degreeING.quarters}
+        />
+      </section>
+    </>
   );
 }
