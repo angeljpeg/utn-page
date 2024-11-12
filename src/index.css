@@ -7,5 +7,12 @@
 
 
 body {
-  background-color: #fff
+  background-color: #fff;
+  @apply font-poppins;
+}
+
+@layer utilities {
+  .center-container {
+    @apply flex items-center justify-center
+  }
 }
