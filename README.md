@@ -1,63 +1,50 @@
+# React + TypeScript + Vite
 
-# UTN - Page
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Esta es una propuesta para la pagina web de la Universidad Tecnologica de Nogales.
+Currently, two official plugins are available:
 
-# Rama: Desarrollo
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Descripción
+## Expanding the ESLint configuration
 
-Aqui se creará una página web para la Universidad Tecnologica de Nogales. Se trabajará con React y Tailwind CSS.
-Para despues de la rama de desarrollo se creará una rama de producción.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
+- Configure the top-level `parserOptions` property like this:
 
-## Instalacion
-
-Para clonar el repositorio en tu maquina sigue los siguientes pasos
-
-1. **Dirigete** a la **carpeta donde deseas clonar el repositorio**.
-```bash
-  git clone https://github.com/angeljpeg/utn-page.git
-```
-2. **Muevete** al **repositorio**.
-```bash
-  cd utn-page
-```
-3. **Instala** las **dependencias**.
-```bash
-  npm install
-```
-4. **Listo para iniciar el proyecto**.
-```bash
-  npm run dev
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-    
-## Technologias
- 
-**Client:** React, TailwindCSS
-## Extensiones recomendadas para VS Code
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-Para trabajar en este proyecto les recomiendo las siguientes extensiones de VS Code:
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-- Tailwind CSS IntelliSense
-- Headwind
-- ES7+ React/Redux/React-Native snippets
-- ESLint
-- Error Lens
-- Prettier - Code formatter
-- Git Graph
-
-## TO-DO
-- Angel: Barra de navegación (carreras): En el nav asignar a cada elección del link un id por ejemplo TI:1, Mecátronica:2, etc. Según la elección tomará de cierta data toda la información del objeto carrera, ya sea el nombreCarrera, descripcionCarrera, etc. Y lo pondrá en el componente genérico de las carreras.
-
-- Angel: Quitar la sombra del navbar
-
-- Garib: 1.- Crear el archivo de data, ademas de la interfaz de las carrera con sus respectivos componentes. ¿Animación de fondo en las materias?
-
-## Colaboradores
-
-- [Angel Gonzalez](https://github.com/angeljpeg)
-- [Garib Flores](https://www.github.com/garibcatastrofe)
-- [Glen Valenzuela](https://www.github.com/octokatherine)
-
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
