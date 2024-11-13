@@ -1,9 +1,5 @@
 import React from "react";
 
-
-
-
-// Scroll To Up Button
 export const ScrollToUp = React.lazy(() => import('./ScrollUpButton/ScrollUpButton'))
-// Loader
+export const Navbar = React.lazy(() => import('./Navbar/Navbar'))
 export {Loader} from "./Loader/Loader"
