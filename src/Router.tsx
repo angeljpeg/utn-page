@@ -1,7 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 
+// Layouts
+import { CarrerasLayout } from "@/layout";
+
 // Pages
-import { NotFoundPage, HomePage, TestPage } from "@/pages";
+import { NotFoundPage, HomePage, TestPage, OfertaEducativaPage } from "@/pages";
 
 // Components
 
@@ -10,10 +13,11 @@ export const AppRouter = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/test" element={<TestPage />} />
-{/*       <Route path="/carreras" element={<CarrerasLayout />}>
+      <Route path="/carreras" element={<CarrerasLayout />}>
         <Route index element={<OfertaEducativaPage />} />
-        <Route path=":carreraId" element={<CarrerasPage />} /> 
-      </Route> */}
+{/*         <Route path="viejoModelo/:carreraId" element={<CarrerasPage />} />
+        <Route path="nuevoModelo/:carreraId" element={<CarrerasPage />} /> */}
+      </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

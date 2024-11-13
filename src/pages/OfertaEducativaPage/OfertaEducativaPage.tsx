@@ -1,7 +1,7 @@
 // Componets
 
 import { Header } from "@/shared";
-/* import { NuevoModeloEducativoGrid } from "./Components"; */
+import { NuevoModeloGrid } from "./Components";
 
 export default function OfertaEducativaPage() {
   return (
@@ -21,7 +21,7 @@ export default function OfertaEducativaPage() {
       </div>
 
       <section className="py-24">
-        {/* <NuevoModeloEducativoGrid /> */}
+        <NuevoModeloGrid />
       </section>
     </section>
   );
