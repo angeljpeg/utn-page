@@ -1,4 +1,6 @@
 export const degreesOld = [
+  //Esta es la oferta vieja
+  
   //TSU Tecnologías de la información
   {
     id: 0,
