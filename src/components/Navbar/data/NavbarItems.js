@@ -1,7 +1,11 @@
 export const NavbarItems = [
   {
-    head: "ALUMNOS",
-    links: [
+    menu: "INICIO",
+    link: "/"
+  },
+  {
+    menu: "ALUMNOS",
+    subMenu: [
       {
         title: "CALIFICACIONES",
         link: "/calificaciones",

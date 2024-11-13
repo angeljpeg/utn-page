@@ -1,1 +1,3 @@
-export {Header} from "./Header";
+import React from "react"
+
+export const Header = React.lazy(() => import("./Header"))
