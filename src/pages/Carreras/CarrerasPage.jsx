@@ -1,4 +1,4 @@
-import { degrees, actionFields } from "./data/degreeInformation";
+import { degreesOld, actionFields } from "./data/degreeInformation";
 
 
 // Components
@@ -14,8 +14,8 @@ export function CarrerasPage() {
   // ID de carrera, aquí en el ejemplo es 0 para "Tecnologías de la información"
   const link = 0;
 
-  const degreeTSU = degrees.find((degree) => degree.id === link);
-  const degreeING = degrees.find(
+  const degreeTSU = degreesOld.find((degree) => degree.id === link);
+  const degreeING = degreesOld.find(
     (degree) => degree.id === degreeTSU?.idForeign
   );
   const actionField = actionFields.find(
