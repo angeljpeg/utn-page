@@ -1,13 +1,15 @@
 // Components
-import { ScrollToUp, Navbar } from "@/shared";
+import { ScrollToUp, Navbar, Header } from "@/shared";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <>
       <Navbar />
-      <h1>Home Page</h1>
+      <main className="min-h-screen py-96 center-container">
+        <Header title="HOME" />
 
-      <ScrollToUp />
-    </main>
+        <ScrollToUp />
+      </main>
+    </>
   );
 }

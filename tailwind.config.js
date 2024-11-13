@@ -7,7 +7,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
       animation: {
-        "animated-gradient": "gradient-move-infinite 10s infinite alternate",
+        "animated-gradient": "gradient-move-infinite 5s infinite alternate",
       },
       keyframes: {
         "gradient-move-infinite": {
