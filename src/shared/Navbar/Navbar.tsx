@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 
 // Components
-import UtnLogo from "@/assets/utn.svg"
-import {NavbarDesktop} from "./NavbarDesktop"
-import {NavbarMobile} from "./NavbarMobile"
+import UtnLogo from "@/assets/utn.svg";
+import UtnLogoBlanco from "@/assets/utn-blanco.svg";
+import { NavbarDesktop } from "./NavbarDesktop";
+import { NavbarMobile } from "./NavbarMobile";
 
 // Data
 import { NavbarItems } from "./NavbarItems";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -18,7 +20,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerBgClass = scrollPosition < 250 ? "backdrop-blur-sm text-white" : "bg-white text-black"; //
+  const headerBgClass =
+    scrollPosition < 250
+      ? "backdrop-blur-sm text-white"
+      : "bg-white text-black"; //
 
   return (
     <>
@@ -31,15 +36,15 @@ export default function Navbar() {
             <div className="lg:hidden">
               <NavbarMobile menus={NavbarItems} />
             </div>
-            
+
             {/* Logo */}
-            <div className="z-50 flex items-center gap-x-3">
+            <Link to="/" className="z-50 flex items-center gap-x-3">
               <img
-                src={UtnLogo}
+                src={scrollPosition < 250 ? UtnLogoBlanco : UtnLogo}
                 alt="Logo de la Universidad Tecnológica Nacional"
                 className="w-24 h-24"
               />
-            </div>
+            </Link>
 
             {/* Menú para pantallas grandes */}
             <ul className="items-center hidden lg:flex gap-x-6">
@@ -50,9 +55,7 @@ export default function Navbar() {
 
             {/* Sección de contacto */}
             <div className="items-center justify-center hidden lg:flex">
-              <span
-                className="text-xl text-green-600 hover:text-green-800"
-              >
+              <span className="text-xl text-green-600 hover:text-green-800">
                 Contacto
               </span>
             </div>
