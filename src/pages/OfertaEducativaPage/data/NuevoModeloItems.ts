@@ -3,7 +3,7 @@ import { SvgIconTypeMap } from "@mui/material";
 
 /* ---------------- ICONS ------------------ */
 // TI
-import CodeIcon from "@mui/icons-material/Code";
+import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
 // MECATRONICA
 import PrecisionManufacturingRoundedIcon from '@mui/icons-material/PrecisionManufacturingRounded';
 // MERCADOTECNIA
@@ -13,7 +13,7 @@ import AirplanemodeActiveIcon from "@mui/icons-material/AirplanemodeActive";
 // INGIENERIA INDUSTRIAL
 import FactoryIcon from "@mui/icons-material/Factory";
 // LOGISTICA INTERNACIONAL
-import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
+import EqualizerOutlinedIcon from '@mui/icons-material/EqualizerOutlined';
 // MANTENIMIENTO INDUSTRIAL
 import HandymanRoundedIcon from '@mui/icons-material/HandymanRounded';
 // ENERGIAS RENOVABLES
@@ -43,7 +43,7 @@ export const NuevoModeloItems: NuevoModelo[] = [
         title: "TSU en Inteligencia Artificial",
       },
     ],
-    icon: CodeIcon,
+    icon: ComputerOutlinedIcon,
   },
   {
     id: 2,
@@ -102,7 +102,7 @@ export const NuevoModeloItems: NuevoModelo[] = [
         title: "TSU en Operaciones Logísticas y Comercio Exterior",
       },
     ],
-    icon: LanguageRoundedIcon,
+    icon: EqualizerOutlinedIcon,
   },
   {
     id: 7,

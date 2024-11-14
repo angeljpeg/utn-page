@@ -14,7 +14,7 @@ export default function NuevoModeloItem({
       className="flex flex-col items-center justify-start p-5 cursor-pointer gap-y-4 rounded-3xl"
       whileHover={{
         scale: 1.02,
-        boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+        boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.1)",
       }}
       transition={{
         type: "spring",
