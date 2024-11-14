@@ -1,5 +1,5 @@
 // Components
-import { ScrollToUp, Navbar, Header } from "@/shared";
+import { ScrollToUp, Navbar, Header, Footer } from "@/shared";
 
 export default function HomePage() {
   return (
@@ -10,6 +10,7 @@ export default function HomePage() {
 
         <ScrollToUp />
       </main>
+      <Footer />
     </>
   );
 }

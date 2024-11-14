@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 
 // Components
 import UtnLogo from "@/assets/utn.svg"
-import { Menu, MobMenu } from "./Components";
+import {NavbarDesktop} from "./NavbarDesktop"
+import {NavbarMobile} from "./NavbarMobile"
 
 // Data
 import { NavbarItems } from "./NavbarItems";
@@ -17,7 +18,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerBgClass = scrollPosition < 250 ? "bg-transparent text-white" : "bg-white text-black"; //
+  const headerBgClass = scrollPosition < 250 ? "bg-transparent text-white" : "bg-white text-black shadow-lg"; //
 
   return (
     <>
@@ -28,7 +29,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between w-full">
             {/* Menú móvil */}
             <div className="lg:hidden">
-              <MobMenu menus={NavbarItems} />
+              <NavbarMobile menus={NavbarItems} />
             </div>
             
             {/* Logo */}
@@ -43,7 +44,7 @@ export default function Navbar() {
             {/* Menú para pantallas grandes */}
             <ul className="items-center hidden lg:flex gap-x-6">
               {NavbarItems.map((item) => (
-                <Menu menu={item} key={item.menuName} />
+                <NavbarDesktop menu={item} key={item.menuName} />
               ))}
             </ul>
 
