@@ -1,7 +1,7 @@
 // Componets
 
 import { Header } from "@/shared";
-import { NuevoModeloGrid } from "./Components";
+import { TabsModelos } from "./Components";
 
 export default function OfertaEducativaPage() {
   return (
@@ -20,8 +20,8 @@ export default function OfertaEducativaPage() {
         <Header title="OFERTA EDUCATIVA" />
       </div>
 
-      <section className="py-24">
-        <NuevoModeloGrid />
+      <section className="">
+        <TabsModelos />
       </section>
     </section>
   );
