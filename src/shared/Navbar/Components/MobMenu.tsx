@@ -12,7 +12,7 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 import { Link } from "react-router-dom";
 
 interface SubMenuProps {
-  subMenu: SubMenuItem[];
+  subMenu: SubMenuItem[] | undefined;
   isActive: boolean;
 }
 
@@ -32,7 +32,7 @@ function SubMenu({ subMenu, isActive }: SubMenuProps) {
       variants={subMenuDrawer}
       className="ml-5"
     >
-      {subMenu.map(({ title, link }, idx) => (
+      {subMenu?.map(({ title, link }, idx) => (
         <li
           key={idx}
           className="flex items-center p-2 duration-150 ease-in-out rounded-md hover:bg-gray-200 gap-x-2"
@@ -85,51 +85,50 @@ function MenuItem({ menu, isActive, onClick }: MenuItemProps) {
   );
 }
 
-
 interface MobMenuProps {
-    menus: NavbarItem[]
+  menus: NavbarItem[];
 }
 
-export default function MobMenu({ menus } : MobMenuProps) {
-    const [isOpen, setIsOpen] = useState(false);
-    const [activeMenu, setActiveMenu] = useState(null);
-  
-    const toggleIsOpen = useCallback(() => {
-      setIsOpen((prev) => !prev);
-      setActiveMenu(null);
-    }, []);
-  
-    const handleMenuClick = useCallback((index) => {
-      setActiveMenu((prev) => (prev === index ? null : index));
-    }, []);
-  
-    return (
-      <div>
-        <button
-          className="text-4xl z-[999] relative"
-          onClick={toggleIsOpen}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-        >
-          {isOpen ? <CloseRoundedIcon /> : <MenuRoundedIcon />}
-        </button>
-        <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: isOpen ? "0" : "-100%" }}
-          transition={{ duration: 0.3 }}
-          onAnimationComplete={() => console.log("Done")}
-          className="fixed left-0 right-0 h-full p-6 overflow-y-auto text-gray-800 top-24 bg-gray-100 backdrop-blur z-[1000]"
-        >
-          <ul>
-            {menus?.map((menu, i) => (
-              <MenuItem
-                key={menu.id || i}
-                menu={menu}
-                isActive={activeMenu === i}
-                onClick={() => handleMenuClick(i)}
-              />
-            ))}
-          </ul>
-        </motion.div>
-      </div>
-    );
-  }
+export default function MobMenu({ menus }: MobMenuProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState<number | null>(null);
+
+  const toggleIsOpen = useCallback(() => {
+    setIsOpen((prev) => !prev);
+    setActiveMenu(null);
+  }, []);
+
+  const handleMenuClick = useCallback((index: number) => {
+    setActiveMenu((prev) => (prev === index ? null : index)); // Ahora 'prev' puede ser 'number | null'
+  }, []);
+
+  return (
+    <div>
+      <button
+        className="text-4xl z-[999] relative"
+        onClick={toggleIsOpen}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+      >
+        {isOpen ? <CloseRoundedIcon /> : <MenuRoundedIcon />}
+      </button>
+      <motion.div
+        initial={{ x: "-100%" }}
+        animate={{ x: isOpen ? "0" : "-100%" }}
+        transition={{ duration: 0.3 }}
+        onAnimationComplete={() => console.log("Done")}
+        className="fixed left-0 right-0 h-full p-6 overflow-y-auto text-gray-800 top-24 bg-gray-100 backdrop-blur z-[1000]"
+      >
+        <ul>
+          {menus?.map((menu, i) => (
+            <MenuItem
+              key={menu.id || i}
+              menu={menu}
+              isActive={activeMenu === i}
+              onClick={() => handleMenuClick(i)}
+            />
+          ))}
+        </ul>
+      </motion.div>
+    </div>
+  );
+}

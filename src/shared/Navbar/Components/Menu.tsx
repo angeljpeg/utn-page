@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 
 interface SubMenuProps {
-  subMenu: SubMenuItem[];
+  subMenu: SubMenuItem[] | undefined;
   isHover: boolean;
 }
 
@@ -38,7 +38,7 @@ function SubMenu({ subMenu, isHover } : SubMenuProps) {
       variants={subMenuAnimate}
     >
       <div className="grid gap-2">
-        {subMenu.map(({ title, link }, idx) => (
+        {subMenu?.map(({ title, link }, idx) => (
           <div key={idx} className="relative cursor-pointer">
             <div className="flex items-center group/menubox gap-y-4">
               <Link
