@@ -18,12 +18,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerBgClass = scrollPosition < 250 ? "bg-transparent text-white" : "bg-white text-black shadow-lg"; //
+  const headerBgClass = scrollPosition < 250 ? "backdrop-blur-sm text-white" : "bg-white text-black"; //
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 flex items-center h-24 text-sm transition-all duration-150 ${headerBgClass} z-[100]`}
+        className={`fixed top-0 left-0 right-0 flex items-center h-24 text-sm transition-all shadow-lg duration-150 ${headerBgClass} z-[100]`}
       >
         <nav className="px-3.5 flex justify-between items-center w-full max-w-7xl mx-auto">
           <div className="flex items-center justify-between w-full">

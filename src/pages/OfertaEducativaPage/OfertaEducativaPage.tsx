@@ -1,14 +1,15 @@
 // Componets
-
 import { Header } from "@/shared";
 import { TabsModelos } from "./Components";
+import OfertaImage from "@/assets/images/OfertaEducativa.webp"
+//
 
 export default function OfertaEducativaPage() {
   return (
     <section className="w-full">
       <div className="relative w-full h-[50vh]">
         <img
-          src="https://blog.orange.es/wp-content/uploads/sites/4/2024/03/fondos-de-pantalla-3d-paisaje.jpg"
+          src={OfertaImage}
           alt="imagen"
           className="object-cover w-full h-full"
           loading="lazy"

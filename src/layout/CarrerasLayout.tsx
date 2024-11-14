@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 // Components
-import { ScrollToUp, Navbar } from "@/shared";
+import { ScrollToUp, Navbar, Footer } from "@/shared";
 
 export default function CarrerasLayout() {
   return (
@@ -16,7 +16,7 @@ export default function CarrerasLayout() {
       </main>
 
       {/* Pie de Pagina de la Paginas */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
