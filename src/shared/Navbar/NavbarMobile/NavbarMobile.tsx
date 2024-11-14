@@ -31,18 +31,19 @@ export default function MobMenu({ menus }: MobMenuProps) {
   return (
     <div>
       <button
-        className="text-4xl z-[999] relative"
+        className={`text-4xl z-[999] relative`}
         onClick={toggleIsOpen}
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         {isOpen ? <CloseRoundedIcon /> : <MenuRoundedIcon />}
       </button>
+
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? "0" : "-100%" }}
         transition={{ duration: 0.3 }}
         onAnimationComplete={() => console.log("Done")}
-        className="fixed left-0 right-0 h-full p-6 overflow-y-auto text-gray-800 top-24 bg-gray-100 backdrop-blur z-[1000]"
+        className="fixed left-0 right-0 h-full p-6 overflow-y-auto top-24 text-gray-800 bg-gray-100 z-[900]"
       >
         <ul>
           {menus?.map((menu, i) => (

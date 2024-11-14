@@ -22,13 +22,13 @@ export default function Navbar() {
 
   const headerBgClass =
     scrollPosition < 250
-      ? "backdrop-blur-sm text-white"
+      ? "bg-white/5 text-white"
       : "bg-white text-black"; //
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 flex items-center h-24 text-sm transition-all shadow-lg duration-150 ${headerBgClass} z-[100]`}
+        className={`fixed top-0 left-0 right-0 flex items-center h-24 text-sm shadow-lg  duration-150 ${headerBgClass} z-[100]`}
       >
         <nav className="px-3.5 flex justify-between items-center w-full max-w-7xl mx-auto">
           <div className="flex items-center justify-between w-full">
@@ -38,7 +38,7 @@ export default function Navbar() {
             </div>
 
             {/* Logo */}
-            <Link to="/" className="z-50 flex items-center gap-x-3">
+            <Link to="/" className="z-[999] flex items-center gap-x-3">
               <img
                 src={scrollPosition < 250 ? UtnLogoBlanco : UtnLogo}
                 alt="Logo de la Universidad Tecnológica Nacional"
