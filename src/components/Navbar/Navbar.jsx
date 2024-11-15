@@ -17,7 +17,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerBgClass = scrollPosition < 250 ? "bg-transparent text-white" : "bg-white text-black"; //
+  const headerBgClass = scrollPosition < 250 ? "bg-white/5 text-white" : "bg-white text-black"; //
 
   return (
     <>

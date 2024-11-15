@@ -59,5 +59,5 @@ Para trabajar en este proyecto les recomiendo las siguientes extensiones de VS C
 
 - [Angel Gonzalez](https://github.com/angeljpeg)
 - [Garib Flores](https://www.github.com/garibcatastrofe)
-- [Glen Valenzuela](https://www.github.com/octokatherine)
+
 
