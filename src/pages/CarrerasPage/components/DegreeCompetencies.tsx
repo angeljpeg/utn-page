@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import BeenhereIcon from "@mui/icons-material/Beenhere";
@@ -8,6 +7,7 @@ interface DegreeCompetenciesProps {
   title: string;
   area: string | undefined;
   competencies: string[];
+  directionFlex: string;
 }
 
 export default function DegreeCompetencies({
@@ -15,17 +15,26 @@ export default function DegreeCompetencies({
   title,
   area,
   competencies,
+  directionFlex,
 }: DegreeCompetenciesProps) {
+  const [hasAnimated, setHasAnimated] = useState(false); // Nuevo estado para controlar si la animación ya se hizo
   const [isInView, setIsInView] = useState(false);
+
+  const [flexDirection, setFlexDirection] = useState("normal"); // Determinar Dirección del Flex
+
   const ref = useRef(null);
+
+  useEffect(() => {
+    setFlexDirection(directionFlex); // Cambiar la dirección del Flex cuando se recibe el prop
+  }, [directionFlex]); // Dependemos de directionFlex para actualizar
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasAnimated) {
+          // Solo si no ha sido animado
           setIsInView(true);
-        } else {
-          setIsInView(false);
+          setHasAnimated(true); // Aseguramos que la animación no se repita
         }
       },
       {
@@ -33,7 +42,6 @@ export default function DegreeCompetencies({
       }
     );
 
-    // Guardamos el valor del ref en una variable local antes de usarlo
     const currentRef = ref.current;
 
     if (currentRef) {
@@ -45,7 +53,8 @@ export default function DegreeCompetencies({
         observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [hasAnimated]); // Dependemos de 'hasAnimated' para evitar que se repita
+
   return (
     <div
       ref={ref}
@@ -53,7 +62,11 @@ export default function DegreeCompetencies({
         isTSU ? "bg-orange-50" : "bg-blue-50"
       } h-fit`}
     >
-      <div className="flex flex-col items-center justify-center w-full max-w-3xl gap-4 px-4 mx-auto md:flex-row md:px-8 lg:w-9/12">
+      <div
+        className={`flex flex-col items-center justify-center w-full max-w-3xl gap-4 px-4 mx-auto md:${
+          flexDirection === "reverse" ? "flex-row-reverse" : "flex-row"
+        } md:px-8 lg:w-9/12`}
+      >
         {/* Texto de Competencias */}
         <motion.div
           className="w-full mb-6 md:w-5/6 md:mb-0"
@@ -118,10 +131,3 @@ export default function DegreeCompetencies({
     </div>
   );
 }
-
-DegreeCompetencies.propTypes = {
-  title: PropTypes.string,
-  area: PropTypes.string,
-  competencies: PropTypes.array,
-  isTSU: PropTypes.bool,
-};
