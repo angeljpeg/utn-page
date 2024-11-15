@@ -7,6 +7,7 @@ import { ViejoModeloItem as ViejoModeloItemProps } from "../data/ViejoModeloItem
 export default function ViejoModeloItem({
   ing,
   tsu,
+  link,
   icon: Icon,
 }: ViejoModeloItemProps) {
   return (
@@ -30,26 +31,12 @@ export default function ViejoModeloItem({
 
         <span className="font-semibold">TSU: </span>
         <Link
-          to="/"
+          to={`/carreras/viejoModelo/${link}`}
           className="text-base font-semibold text-green-600 transition duration-150 ease-in-out hover:text-green-700"
-          aria-label={`Link to ${ing}`}
+          aria-label={`Link to ${link}`}
         >
           {tsu}
         </Link>
-        {/*         <ul className="space-y-2">
-          {area.map(({ title }) => (
-            <li key={title} className="text-base font-medium">
-              
-              <Link
-                to="#"
-                className="text-green-600 transition duration-150 ease-in-out hover:text-green-700"
-                aria-label={`Link to ${title}`}
-              >
-                {title}
-              </Link>
-            </li>
-          ))}
-        </ul> */}
       </div>
     </motion.div>
   );

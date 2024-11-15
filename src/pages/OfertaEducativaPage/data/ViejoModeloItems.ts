@@ -24,6 +24,7 @@ export interface ViejoModeloItem {
     ing: string
     tsu: string
     area: string
+    link: string
     icon: OverridableComponent<SvgIconTypeMap>
 }
 
@@ -33,6 +34,7 @@ export const ViejoModeloItems : ViejoModeloItem[] = [
         ing: "Ing. en Desarrollo y Gestión de Software",
         tsu: "Tecnológias de la Información",
         area: "Desarrollo de Software Multiplataforma",
+        link: "tecnologias-informacion",
         icon: ComputerOutlinedIcon
     },
     {
@@ -40,6 +42,7 @@ export const ViejoModeloItems : ViejoModeloItem[] = [
         ing: "Ing. en Mecatrónica",
         tsu: "Mecatrónica",
         area: "Automatización.",
+        link: "mecatronica",
         icon: PrecisionManufacturingRoundedIcon
     },
     {
@@ -47,6 +50,7 @@ export const ViejoModeloItems : ViejoModeloItem[] = [
         ing: "Ing. Sistemas Productivos",
         tsu: "Desarrollo de Negocios",
         area: "Mercadotecnia.",
+        link: "negocios",
         icon: PublicRoundedIcon
     },
     {
@@ -54,6 +58,7 @@ export const ViejoModeloItems : ViejoModeloItem[] = [
         ing: "Ing. Sistemas Productivos",
         tsu: "Procesos Industriales",
         area: "Manufactura.",
+        link: "procesos-industriales",
         icon: FactoryIcon
     },
     {
@@ -61,6 +66,7 @@ export const ViejoModeloItems : ViejoModeloItem[] = [
         ing: "Ing. en Energias Renovables",
         tsu: "Energias Renovables",
         area: "Calidad y ahorro de energía.",
+        link: "energias-renovables",
         icon: EnergySavingsLeafRoundedIcon
     },
     {
@@ -68,6 +74,7 @@ export const ViejoModeloItems : ViejoModeloItem[] = [
         ing: "Ing. Logística Internacional",
         tsu: "Operaciones Comerciales Internacionales",
         area: "Clasificación Arancelaria y Desapacho Aduanero.",
+        link: "comercio-internacional",
         icon: EqualizerOutlinedIcon
     },
     {
@@ -75,13 +82,15 @@ export const ViejoModeloItems : ViejoModeloItem[] = [
         ing: "Ing. en Manufactura Aeronáutica",
         tsu: "Manufactura Aeronáutica",
         area: "Maquinados de Precisión",
+        link: "aeronautica",
         icon: AirplanemodeActiveIcon
     },
     {
         id: 8,
-        ing: "Ing. en Manufactura Aeronáutica",
+        ing: "Ing. en Mantenimiento Industrial",
         tsu: "Mantenimiento",
         area: "Industrial",
+        link: "mantenimiento-industrial",
         icon: HandymanRoundedIcon
     },
 ]
