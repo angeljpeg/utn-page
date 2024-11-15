@@ -58,12 +58,12 @@ export default function DegreeCompetencies({
   return (
     <div
       ref={ref}
-      className={`w-full py-16 sm:py-24 md:py-32 ${
+      className={`w-full py-16 sm:py-24 md:py-28 cursor-default ${
         isTSU ? "bg-orange-50" : "bg-blue-50"
       } h-fit`}
     >
       <div
-        className={`flex flex-col items-center justify-center w-full max-w-3xl gap-4 px-4 mx-auto md:${
+        className={`flex flex-col items-center justify-center w-full gap-4 px-4 mx-auto md:${
           flexDirection === "reverse" ? "flex-row-reverse" : "flex-row"
         } md:px-8 lg:w-9/12`}
       >
@@ -101,7 +101,7 @@ export default function DegreeCompetencies({
                     isTSU ? "text-orange-200" : "text-blue-200"
                   }`}
                 />
-                <span className="flex-1 text-sm sm:text-base">
+                <span className="flex-1 text-sm md:text-base">
                   {competencie}
                 </span>
               </motion.li>

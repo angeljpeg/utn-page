@@ -43,7 +43,7 @@ export default function CarrerasPage({
           area={degreeTSU.area}
           competencies={degreeTSU.competencies}
           isTSU={true}
-          directionFlex="normal"
+          directionFlex="reverse"
         />
 
         <DegreeCompetencies
@@ -51,7 +51,7 @@ export default function CarrerasPage({
           area={undefined}
           competencies={degreeING.competencies}
           isTSU={false}
-          directionFlex="reverse"
+          directionFlex="normal"
         />
 
         <ActionFields fields={actionField.actionFields} />

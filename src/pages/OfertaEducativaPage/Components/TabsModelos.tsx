@@ -20,15 +20,15 @@ function TabsComponent() {
   return (
     <section className="py-24">
       {/* Tabs */}
-      <div className="flex justify-center mb-8 space-x-4">
+      <div className="flex justify-center p-4 mx-auto mb-8 space-x-4 shadow-lg bg-stone-200 rounded-3xl w-fit">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 text-lg font-semibold rounded-lg ${
+            className={`px-4 py-2 text-lg font-semibold rounded-lg duration-500  ${
               activeTab === tab.id
                 ? "bg-green-500 text-white shadow-md"
-                : "bg-gray-200 text-gray-700"
+                : "text-gray-700"
             }`}
           >
             {tab.label}

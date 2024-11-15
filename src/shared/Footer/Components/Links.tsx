@@ -2,9 +2,9 @@ import {linksFooter} from "../FooterLinks"
 
 export default function Links() {
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <div className="flex flex-col gap-4">
       <span className="text-xl font-semibold text-neutral-50">Sitios de Interés</span>
-      <ul className="flex flex-col items-center gap-4">
+      <ul className="flex flex-col gap-4">
         {linksFooter.map((link) => (
           <li key={link.name}>
             <a
