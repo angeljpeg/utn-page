@@ -34,7 +34,7 @@ export default function CarrerasPage({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/50"></div>
       </div>
-      <div className="absolute text-center transform -translate-x-1/2 -translate-y-1/2 left-1/2">
+      <div className="absolute w-full text-center transform -translate-x-1/2 -translate-y-1/2 center-container left-1/2">
         <Header title={`TSU en ${degreeTSU.title}`} />
       </div>
       <div className="flex flex-col items-center justify-center w-full min-h-screen pt-20 pb-10">

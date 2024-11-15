@@ -6,19 +6,19 @@ export default function Contacto() {
     <div className="flex flex-col gap-4">
       <span className="text-xl font-semibold text-neutral-50">Contacto</span>
       <div className="flex flex-row gap-2">
-        <FmdGoodIcon className="text-green-500" />
-        <p className="text-sm font-semibol text-neutral-300">
+        <FmdGoodIcon className="text-green-600" />
+        <p className="text-sm font-semibold text-neutral-300">
           Nogales, Sonora, México
         </p>
       </div>
       <div className="flex flex-row gap-2">
-        <LocalPhoneIcon className="text-green-500" />
+        <LocalPhoneIcon className="text-green-600" />
         <p className="text-sm font-semibold text-neutral-300">
           Tel: (xxx) xxx-xxxx
         </p>
       </div>
       <div className="flex flex-row gap-2">
-        <EmailIcon className="text-green-500" />
+        <EmailIcon className="text-green-600" />
         <p className="text-sm font-semibold text-neutral-300">
           Email: info@utn.edu.mx
         </p>

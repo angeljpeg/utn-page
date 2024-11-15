@@ -5,6 +5,7 @@ import UtnLogo from "@/assets/utn.svg";
 import UtnLogoBlanco from "@/assets/utn-blanco.svg";
 import { NavbarDesktop } from "./NavbarDesktop";
 import { NavbarMobile } from "./NavbarMobile";
+import { Contacto } from "./Components";
 
 // Data
 import { NavbarItems } from "./NavbarItems";
@@ -21,9 +22,7 @@ export default function Navbar() {
   }, []);
 
   const headerBgClass =
-    scrollPosition < 250
-      ? "bg-white/5 text-white"
-      : "bg-white text-black"; //
+    scrollPosition < 250 ? "bg-white/5 text-white" : "bg-white text-black"; //
 
   return (
     <>
@@ -38,7 +37,10 @@ export default function Navbar() {
             </div>
 
             {/* Logo */}
-            <Link to="/" className="z-[999] flex items-center gap-x-3">
+            <Link
+              to="/"
+              className="z-[999] hidden lg:flex items-center gap-x-3"
+            >
               <img
                 src={scrollPosition < 250 ? UtnLogoBlanco : UtnLogo}
                 alt="Logo de la Universidad Tecnológica Nacional"
@@ -47,17 +49,15 @@ export default function Navbar() {
             </Link>
 
             {/* Menú para pantallas grandes */}
-            <ul className="items-center hidden lg:flex gap-x-6">
+            <ul className="items-center hidden lg:flex gap-x-1">
               {NavbarItems.map((item) => (
                 <NavbarDesktop menu={item} key={item.menuName} />
               ))}
             </ul>
 
             {/* Sección de contacto */}
-            <div className="items-center justify-center hidden lg:flex">
-              <span className="text-xl text-green-600 hover:text-green-800">
-                Contacto
-              </span>
+            <div className="flex items-center justify-end w-[150px]">
+              <Contacto />
             </div>
           </div>
         </nav>
