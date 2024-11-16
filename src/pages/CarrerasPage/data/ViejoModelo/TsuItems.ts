@@ -14,8 +14,8 @@ export interface IdegreesOld {
   id: number;
   idForeign: number | undefined;
   title: string;
-  img: string;
-  area: string | "";
+  img: string | undefined;
+  area: string | undefined;
   type: degreesTypes;
   competencies: string[];
   quarters: Iquarters[];
@@ -27,6 +27,7 @@ export const degreesOld = [
     id: 0,
     idForeign: 8,
     title: "Tecnologías de la información",
+    img: "https://www.lumiun.com/blog/wp-content/uploads/technology-network-data-connection-network-marketing-cyber-security-concept.jpg",
     area: "Desarrollo de Software Multiplataforma",
     type: degreesTypes.TSU,
     competencies: [
@@ -116,6 +117,7 @@ export const degreesOld = [
     idForeign: 9,
     title: "Mecatrónica",
     area: "Automatización",
+    img: "https://www.redmetal.es/wp-content/uploads/2021/03/img-ing-mecatronica-banner-1.jpg",
     type: degreesTypes.TSU,
     competencies: [
       "Desarrollar y conservar sistemas automatizados y de control, utilizando tecnología adecuada, de acuerdo a normas, especificaciones técnicas y de seguridad para mejorar y mantener los procesos productivos.",
@@ -203,6 +205,7 @@ export const degreesOld = [
     id: 2,
     idForeign: 10,
     title: "Procesos Industriales",
+    img: "https://vzpumps.com/wp-content/uploads/2021/07/banner-7.jpg",
     area: "Manufactura",
     type: degreesTypes.TSU,
     competencies: [
@@ -294,6 +297,7 @@ export const degreesOld = [
     id: 3,
     idForeign: 11,
     title: "Operaciones Comerciales Internacionales",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYpRAacG4n_9jeya8uM_QEPkARonQdVnumE-DxuX4CDZygdU5D1EPFn0uJs2OSoNB7w&usqp=CAU",
     area: "Clasificación Arancelaría y Despacho Aduanero",
     type: degreesTypes.TSU,
     competencies: [

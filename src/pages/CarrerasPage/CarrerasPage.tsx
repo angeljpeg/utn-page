@@ -23,11 +23,16 @@ export default function CarrerasPage({
 
   if (!degreeTSU || !degreeING || !actionField) return null;
 
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+
   return (
     <section>
       <div className="relative w-full h-[50vh]">
         <img
-          src={OfertaImage}
+          src={degreeTSU.img || OfertaImage }
           alt="imagen"
           className="object-cover w-full h-full"
           loading="lazy"
