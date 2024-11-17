@@ -10,7 +10,7 @@ export default function CarrerasLayout() {
       <Navbar />
 
       {/* Este es el lugar donde las rutas se renderizarán */}
-      <main className="min-h-screen">
+      <main className="min-h-screen overflow-y-hidden">
         <Outlet />
         <ScrollToUp />
       </main>

@@ -19,7 +19,7 @@ export default function MenuItem({ menu, isActive, onClick }: MenuItemProps) {
   const hasSubmenu = subMenu ? true : false;
 
   return (
-    <li key={id}>
+    <li key={id} className="font-semibold">
       {hasSubmenu ? (
         <span
           className="relative flex items-center justify-between p-4 duration-150 ease-in-out rounded-md cursor-pointer hover:bg-gray-300"
