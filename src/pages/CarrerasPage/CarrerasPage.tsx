@@ -1,9 +1,9 @@
 import { degreesOld, actionFields } from "./data/ViejoModelo/TsuItems";
 
-//
 // Components
 import { ActionFields, DegreeCompetencies, SubjectsList } from "./components";
 import OfertaImage from "@/assets/images/OfertaEducativa.webp";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 
 import { Header } from "@/shared";
 
@@ -32,7 +32,7 @@ export default function CarrerasPage({
     <section>
       <div className="relative w-full h-[50vh]">
         <img
-          src={degreeTSU.img || OfertaImage }
+          src={degreeTSU.img || OfertaImage}
           alt="imagen"
           className="object-cover w-full h-full"
           loading="lazy"
@@ -72,6 +72,18 @@ export default function CarrerasPage({
           } en ${degreeING.title}`}
           quarters={degreeING.quarters}
         />
+
+        {degreeTSU.pdf && (
+          <div className="flex flex-row gap-4">
+            <a
+              href={degreeTSU.pdf}
+              download={degreeTSU.pdf}
+              className="p-4 text-center text-white duration-200 bg-red-500 rounded-xl min-w-28 hover:bg-red-400"
+            >
+              <PictureAsPdfIcon />
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

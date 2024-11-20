@@ -1,3 +1,12 @@
+// PDFS
+// TI
+// MECATRONICA
+import PDF_MECATRONICA from "/pdfs/carreras/viejoModelo/ing_mecatronica.pdf"
+// PROCESOS INDUSTRIALES
+// COMERCIO INTERNACIONAL
+// ENERGIAS RENOVABLES
+// AERONAUTICA
+
 export enum degreesTypes {
   TSU = "tsu",
   ING = "ing",
@@ -118,6 +127,7 @@ export const degreesOld = [
     title: "Mecatrónica",
     area: "Automatización",
     img: "https://www.redmetal.es/wp-content/uploads/2021/03/img-ing-mecatronica-banner-1.jpg",
+    pdf: PDF_MECATRONICA,
     type: degreesTypes.TSU,
     competencies: [
       "Desarrollar y conservar sistemas automatizados y de control, utilizando tecnología adecuada, de acuerdo a normas, especificaciones técnicas y de seguridad para mejorar y mantener los procesos productivos.",
