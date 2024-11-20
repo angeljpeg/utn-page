@@ -17,9 +17,22 @@ export default function HomePage() {
     <>
       <Navbar />
       <Carousel urls={SLIDES} />
-      <div className="absolute text-center transform -translate-x-1/2 -translate-y-1/2 left-1/2">
-        <Header title="UNIVERSIDAD TECNOLOGICA DE NOGALES" />
-      </div>
+      {/* <div className="absolute flex justify-center w-full transform -translate-y-1/2 ">
+        <header className=" mx-6 items-center gap-8 px-6 py-12 shadow-xl rounded-lg animate-animated-gradient bg-gradient-to-br from-lime-500 via-green-500 to-lime-500 bg-[length:200%_200%] displayHeader lg:gap-10">
+          <GenerateIconsText
+            title={"Certificación de competencias"}
+            icon={BiCertification}
+          />
+          <GenerateIconsText
+            title={"Educación continua"}
+            icon={MdCastForEducation}
+          />
+          <GenerateIconsText
+            title={"Informe Anual de Resultados 2023"}
+            icon={SlNotebook}
+          />
+        </header>
+      </div> */}
       <main className="min-h-screen py-96 center-container">
         <ScrollToUp />
       </main>
