@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { motion, AnimatePresence, PanInfo  } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function Carousel({ urls }: { urls: string[] }) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -43,13 +43,23 @@ export default function Carousel({ urls }: { urls: string[] }) {
     setIsAnimating(false);
   };
 
+  // Set interval to change the image every 10 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      paginate(imageIndex); // Move to the next image
+    }, 1000); // 10000ms = 10 seconds
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(timer);
+  }, [imageIndex, paginate]); // Runs when imageIndex changes to avoid multiple intervals
+
   return (
     <div className="relative flex items-center justify-center w-full h-screen overflow-hidden bg-black">
       {/* Image Container */}
       <div className="relative z-0 w-full h-full">
         <AnimatePresence custom={direction}>
           <motion.img
-            key={urls[imageIndex]}
+            key={urls[imageIndex]} // Asegúrate de que sea único
             src={urls[imageIndex]}
             alt={`Slide ${imageIndex + 1}`}
             className="absolute top-0 left-0 object-cover w-full h-full"
