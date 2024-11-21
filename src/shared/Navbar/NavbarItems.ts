@@ -1,6 +1,16 @@
+// PDFS
+// ASPIRANTES
+import PDF_CALENDARIO from "/pdfs/navbar/Calendario.pdf";
+import PDF_CONVOCATORIA from "/pdfs/navbar/convocatoria.pdf";
+import PDF_INDUCCION from "/pdfs/navbar/induccion.pdf";
+import PDF_TRANSPORTE from "/pdfs/navbar/Transporte.pdf";
+// MAESTROS
+import PDF_CONDUCTA from '/pdfs/navbar/cod_conducta.pdf'
+
 export interface SubMenuItem {
   title: string;
-  link: string;
+  link?: string;
+  pdf?: string;
 }
 
 export interface NavbarItem {
@@ -11,11 +21,13 @@ export interface NavbarItem {
 }
 
 export const NavbarItems: NavbarItem[] = [
+  // INICIO
   {
     id: 1,
     menuName: "INICIO",
     link: "/",
   },
+  // ALUMNOS
   {
     id: 2,
     menuName: "ALUMNOS",
@@ -34,7 +46,7 @@ export const NavbarItems: NavbarItem[] = [
       },
       {
         title: "CALENDARIO",
-        link: "/pdf",
+        pdf: PDF_CALENDARIO,
       },
       {
         title: "ACADEMIA DE MATEMATICAS",
@@ -46,18 +58,20 @@ export const NavbarItems: NavbarItem[] = [
       },
     ],
   },
+  // CARRERAS
   {
     id: 3,
     menuName: "CARRERAS",
     link: "/carreras",
   },
+  // ASPIRANTES
   {
     id: 4,
     menuName: "ASPIRANTES",
     subMenu: [
       {
         title: "CONVOCATORIA",
-        link: "/pdf",
+        pdf: PDF_CONVOCATORIA,
       },
       {
         title: "PRE-REGISTRO",
@@ -73,17 +87,30 @@ export const NavbarItems: NavbarItem[] = [
       },
       {
         title: "CURSO DE INDUCCION",
-        link: "/pdf",
+        pdf: PDF_INDUCCION,
       },
       {
         title: "TRANSPORTE",
-        link: "/pdf",
+        pdf: PDF_TRANSPORTE,
       },
     ],
   },
+  // SERVICIOS
   {
     id: 5,
-    menuName: "MAESTRO",
+    menuName: "SERVICIOS",
+    subMenu: [
+      { title: "EDIC. CONTINUA", link: "/educontinua" },
+      { title: "BOLSA DE TRABAJO", link: "/bolsa-trabajo" },
+      { title: "CERTIFICACIONES", link: "/certificaciones" },
+      { title: "EMPRENDEDORES", link: "/emprendedores" },
+      { title: "EGRESADOS", link: "/" },
+    ],
+  },
+  // MAESTROS
+  {
+    id: 6,
+    menuName: "MAESTROS",
     subMenu: [
       {
         title: "CALIFICACIONES",
@@ -99,7 +126,7 @@ export const NavbarItems: NavbarItem[] = [
       },
       {
         title: "COD. DE CONDUCTA",
-        link: "/pdf",
+        pdf: PDF_CONDUCTA,
       },
     ],
   },

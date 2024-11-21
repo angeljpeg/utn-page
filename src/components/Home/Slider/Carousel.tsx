@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function Carousel({ urls }: { urls: string[] }) {
   const [imageIndex, setImageIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
-  const [isAnimating, setIsAnimating] = useState(false); // Track if animation is in progress
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const variants = {
     enter: (direction: number) => ({
@@ -25,41 +25,38 @@ export default function Carousel({ urls }: { urls: string[] }) {
     }),
   };
 
-  const paginate = (newDirection: number) => {
-    if (isAnimating) return; // Prevent further clicks if an animation is in progress
-    setDirection(newDirection);
-    setIsAnimating(true); // Set animating state to true before changing imageIndex
+  const paginate = useCallback(
+    (newDirection: number) => {
+      if (isAnimating) return;
+      setDirection(newDirection);
+      setIsAnimating(true);
 
-    setImageIndex((prevIndex) => {
-      const newIndex = prevIndex + newDirection;
-      if (newIndex < 0) return urls.length - 1;
-      if (newIndex >= urls.length) return 0;
-      return newIndex;
-    });
-  };
+      setImageIndex((prevIndex) => {
+        const newIndex = prevIndex + newDirection;
+        return (newIndex + urls.length) % urls.length;
+      });
+    },
+    [isAnimating, urls.length]
+  );
 
-  // Reset animation state when the transition ends
-  const handleTransitionEnd = () => {
+  useEffect(() => {
+    const timer = setInterval(() => paginate(1), 5000);
+    return () => clearInterval(timer);
+  }, [paginate]);
+
+  const handleAnimationComplete = () => {
     setIsAnimating(false);
   };
 
-  // Set interval to change the image every 10 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      paginate(imageIndex); // Move to the next image
-    }, 1000); // 10000ms = 10 seconds
-
-    // Cleanup the interval on component unmount
-    return () => clearInterval(timer);
-  }, [imageIndex, paginate]); // Runs when imageIndex changes to avoid multiple intervals
+  const getIndicatorClass = (index: number) =>
+    `w-3 h-3 rounded-full duration-300 p-2 border ${index === imageIndex ? "bg-green-500/80 scale-110 border-green-500" : "bg-gray-400/80 scale-75 border-white"}`;
 
   return (
     <div className="relative flex items-center justify-center w-full h-screen overflow-hidden bg-black">
-      {/* Image Container */}
       <div className="relative z-0 w-full h-full">
         <AnimatePresence custom={direction}>
           <motion.img
-            key={urls[imageIndex]} // Asegúrate de que sea único
+            key={urls[imageIndex]}
             src={urls[imageIndex]}
             alt={`Slide ${imageIndex + 1}`}
             className="absolute top-0 left-0 object-cover w-full h-full"
@@ -79,12 +76,11 @@ export default function Carousel({ urls }: { urls: string[] }) {
               const swipe = info.offset.x > 100 ? -1 : info.offset.x < -100 ? 1 : 0;
               if (swipe !== 0) paginate(swipe);
             }}
-            onAnimationComplete={handleTransitionEnd} // When animation completes, reset the animating state
+            onAnimationComplete={handleAnimationComplete}
           />
         </AnimatePresence>
       </div>
 
-      {/* Buttons */}
       <button
         onClick={() => paginate(-1)}
         className="absolute z-10 p-2 text-white -translate-y-1/2 rounded-full top-1/2 left-5 bg-black/30 hover:bg-black/50"
@@ -100,8 +96,7 @@ export default function Carousel({ urls }: { urls: string[] }) {
         <ArrowForwardIosIcon />
       </button>
 
-      {/* Indicators */}
-      <div className="absolute z-10 flex gap-3 transform -translate-x-1/2 bottom-10 left-1/2">
+      <div className="absolute z-10 flex gap-3 transform -translate-x-1/2 bottom-32 left-1/2">
         {urls.map((_, index) => (
           <button
             key={index}
@@ -109,10 +104,8 @@ export default function Carousel({ urls }: { urls: string[] }) {
               setDirection(index > imageIndex ? 1 : -1);
               setImageIndex(index);
             }}
-            className={`w-3 h-3 rounded-full ${
-              index === imageIndex ? "bg-green-500" : "bg-gray-400"
-            }`}
-          ></button>
+            className={getIndicatorClass(index)}
+          />
         ))}
       </div>
     </div>

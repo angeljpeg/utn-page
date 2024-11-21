@@ -31,6 +31,9 @@ export default function Submenu({ subMenu, isHover }: SubMenuProps) {
     []
   );
 
+  const LinkStyles =
+    "text-sm font-semibold text-black duration-200 rounded-lg hover:text-green-600";
+
   return (
     <motion.div
       className="absolute top-[4.2rem] p-4 rounded-md origin-[50%_-170px] backdrop-blur-sm bg-white/[0.9]"
@@ -39,15 +42,18 @@ export default function Submenu({ subMenu, isHover }: SubMenuProps) {
       variants={subMenuAnimate}
     >
       <div className="grid gap-2">
-        {subMenu?.map(({ title, link }, idx) => (
+        {subMenu?.map(({ title, link, pdf }, idx) => (
           <div key={idx} className="relative cursor-pointer">
             <div className="flex items-center group/menubox gap-y-4">
-              <Link
-                className="text-sm font-semibold text-black duration-200 rounded-lg hover:text-green-600"
-                to={link}
-              >
-                {title}
-              </Link>
+              {link ? (
+                <Link className={LinkStyles} to={link}>
+                  {title}
+                </Link>
+              ) : (
+                <a href={pdf} className={LinkStyles}>
+                  {title}
+                </a>
+              )}
             </div>
           </div>
         ))}

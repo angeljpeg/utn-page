@@ -25,8 +25,8 @@ export default function NuevoModeloItem({
       <div className="flex items-center justify-center p-6 mb-4 text-4xl text-white transition duration-200 rounded-full shadow-lg animated-utn-green hover:bg-green-500">
         <Icon />
       </div>
-      <div className="text-center">
-        <span className="block mb-2 text-xl font-semibold">{title}</span>
+      
+      <span className="block mb-2 text-xl font-semibold">{title}</span>
         <ul className="space-y-2">
           {area.map(({ title }) => (
             <li key={title} className="text-base font-medium">
@@ -41,7 +41,6 @@ export default function NuevoModeloItem({
             </li>
           ))}
         </ul>
-      </div>
     </motion.div>
   );
 }

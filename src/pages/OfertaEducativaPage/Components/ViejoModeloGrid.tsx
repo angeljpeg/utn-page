@@ -1,19 +1,11 @@
+import { Card } from "@/components/ui";
 import { ViejoModeloItems } from "../data/ViejoModeloItems.ts";
-import ViejoModeloItem from "./ViejoModeloItem.tsx";
 
 export default function NuevoModeloGrid() {
   return (
-    <div className="grid grid-cols-1 gap-8 px-8 sm:grid-cols-2 lg:grid-cols-3">
-      {ViejoModeloItems.map(({id, ing, tsu, area, link, icon} ) => (
-        <ViejoModeloItem
-          id={id}
-          ing={ing}
-          tsu={tsu}
-          area={area}
-          link={link}
-          icon={icon}
-          key={id}
-        />
+    <div className="grid grid-cols-1 gap-8 px-8 sm:grid-cols-2 lg:grid-cols-4">
+      {ViejoModeloItems.map(({ ing, tsu, link, icon} ) => (
+        <Card title={ing} icon={icon} links={[{title: tsu, url: link}]} extraText="TSU: "/>
       ))}
     </div>
   );

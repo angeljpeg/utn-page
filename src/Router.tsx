@@ -10,6 +10,7 @@ import {
   TestPage,
   OfertaEducativaPage,
   CarrerasPage,
+  AuditoriaFederacion,
 } from "@/pages";
 
 // Components
@@ -22,10 +23,7 @@ export const AppRouter = () => {
       <Route path="/carreras" element={<CarrerasLayout />}>
         <Route index element={<OfertaEducativaPage />} />
         {/* Rutas Carreras Viejo Modelo */}
-        <Route
-          path=":id"
-          element={<CarrerasPage carreraIndex={1} />}
-        />        
+        <Route path=":id" element={<CarrerasPage carreraIndex={1} />} />
         <Route
           path="viejoModelo/tecnologias-informacion"
           element={<CarrerasPage carreraIndex={0} />}
@@ -58,6 +56,7 @@ export const AppRouter = () => {
           path="viejoModelo/negocios"
           element={<CarrerasPage carreraIndex={7} />}
         />
+        <Route path="test" element={<AuditoriaFederacion />} />
 
         {/* Rutas Carreras Nuevo Modelo */}
         {/*          <Route path="nuevoModelo/:carreraId" element={<CarrerasPage />} /> */}
