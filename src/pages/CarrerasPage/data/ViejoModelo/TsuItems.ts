@@ -1,11 +1,16 @@
 // PDFS
 // TI
+import PDF_TI from '/pdfs/carreras/viejoModelo/ing_TecnologiasInformacion.pdf'
 // MECATRONICA
 import PDF_MECATRONICA from "/pdfs/carreras/viejoModelo/ing_mecatronica.pdf"
 // PROCESOS INDUSTRIALES
+import PDF_PROCESOS from '/pdfs/carreras/viejoModelo/ing_SistemasProductivos.pdf'
 // COMERCIO INTERNACIONAL
+import ING_COMERCIO from '/pdfs/carreras/viejoModelo/ing_logistica.pdf'
 // ENERGIAS RENOVABLES
+import ING_ENERGIAS from '/pdfs/carreras/viejoModelo/ing_energiasRenovables.pdf'
 // AERONAUTICA
+import ING_AERONAUTICA from '/pdfs/carreras/viejoModelo/ing_aeronautica.pdf'
 
 export enum degreesTypes {
   TSU = "tsu",
@@ -37,6 +42,7 @@ export const degreesOld = [
     idForeign: 8,
     title: "Tecnologías de la información",
     img: "https://www.lumiun.com/blog/wp-content/uploads/technology-network-data-connection-network-marketing-cyber-security-concept.jpg",
+    pdf: PDF_TI,
     area: "Desarrollo de Software Multiplataforma",
     type: degreesTypes.TSU,
     competencies: [
@@ -216,6 +222,7 @@ export const degreesOld = [
     idForeign: 10,
     title: "Procesos Industriales",
     img: "https://vzpumps.com/wp-content/uploads/2021/07/banner-7.jpg",
+    pdf: PDF_PROCESOS,
     area: "Manufactura",
     type: degreesTypes.TSU,
     competencies: [
@@ -309,6 +316,7 @@ export const degreesOld = [
     title: "Operaciones Comerciales Internacionales",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYpRAacG4n_9jeya8uM_QEPkARonQdVnumE-DxuX4CDZygdU5D1EPFn0uJs2OSoNB7w&usqp=CAU",
     area: "Clasificación Arancelaría y Despacho Aduanero",
+    pdf: ING_COMERCIO,
     type: degreesTypes.TSU,
     competencies: [
       "Manejo e interpretación adecuada de la tarifa aduanera.",
@@ -391,6 +399,7 @@ export const degreesOld = [
     id: 4,
     idForeign: 12,
     title: "Energías Renovables",
+    pdf: ING_ENERGIAS,
     area: "Calidad y Ahorro de Energía",
     type: degreesTypes.TSU,
     competencies: [
@@ -483,6 +492,7 @@ export const degreesOld = [
     id: 5,
     idForeign: 13,
     title: "Manufactura Aeronáutica",
+    pdf: ING_AERONAUTICA,
     area: "Maquinados de Precisión",
     type: degreesTypes.TSU,
     competencies: [
