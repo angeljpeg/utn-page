@@ -1,41 +1,55 @@
-import { useState, useCallback } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 
 // Components
 import CallEndIcon from "@mui/icons-material/CallEnd";
 
 export default function Contacto() {
-  const [openContact, setOpenContact] = useState<boolean>(false);
+  const [openContact, setOpenContact] = useState(false);
+  const textRef = useRef<HTMLAnchorElement>(null);
+  const [calculatedWidth, setCalculatedWidth] = useState(50); // Ancho inicial
 
-  const onClickContact = useCallback(() => {
-    setOpenContact((prev) => !prev);
-  }, []);
+  useLayoutEffect(() => {
+    if (textRef.current && openContact) {
+      const contentWidth = textRef.current.offsetWidth;
+      setCalculatedWidth(contentWidth + 55); // Agregar espacio adicional
+    } else {
+      setCalculatedWidth(50); // Ancho cerrado
+    }
+  }, [openContact]);
+
   return (
     <motion.div
       className="flex items-center justify-between h-full gap-2 p-3 overflow-hidden text-white bg-green-500 rounded-full cursor-pointer"
-      onClick={onClickContact}
-      initial={{}} // Color inicial (verde)
-      animate={{
-        width: openContact ? "150px" : "50px", // Tamaño dinámico
+      onClick={() => setOpenContact((prev) => !prev)}
+      animate={{ width: calculatedWidth }}
+      transition={{
+        duration: 0.4,
+        ease: "easeInOut",
       }}
-      transition={{ duration: 0.3 }} // Duración de la animación del color y tamaño
     >
       <motion.div
-        animate={{ rotate: openContact ? "-115deg" : 0 }}
-        transition={{ duration: 0.3, ease: "easeIn" }}
+        animate={{
+          rotate: openContact ? -115 : 0,
+          scale: openContact ? 1.2 : 1,
+        }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <CallEndIcon />
       </motion.div>
+
       {openContact && (
-        <motion.span
-          className="whitespace-nowrap"
-          initial={{ opacity: 0, x: -10 }} // Inicialmente invisible y desplazado
-          animate={{ opacity: 1, x: 0 }} // Aparece con un desplazamiento
-          exit={{ opacity: 0, x: -10 }} // Se oculta con un desplazamiento
-          transition={{ duration: 0.3, ease: "easeIn" }}
+        <motion.a
+          ref={textRef}
+          href="tel:+526313111830"
+          className="transition-colors duration-300 whitespace-nowrap hover:text-white/80"
+          initial={{ opacity: 0, x: -15 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -15 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
         >
           631 311 1830
-        </motion.span>
+        </motion.a>
       )}
     </motion.div>
   );

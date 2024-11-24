@@ -59,7 +59,10 @@ export const AppRouter = () => {
         <Route path="test" element={<AuditoriaFederacion />} />
 
         {/* Rutas Carreras Nuevo Modelo */}
-        {/*          <Route path="nuevoModelo/:carreraId" element={<CarrerasPage />} /> */}
+        <Route path="nuevoModelo/desarrollo-software" element={<CarrerasPage carreraIndex={0} isNewModel={true}/>} />
+        <Route path="nuevoModelo/inteligencia-artificial" element={<CarrerasPage carreraIndex={1} isNewModel={true}/>} />
+        <Route path="nuevoModelo/automatizacion" element={<CarrerasPage carreraIndex={2} isNewModel={true}/>} />
+        <Route path="nuevoModelo/robotica" element={<CarrerasPage carreraIndex={3} isNewModel={true}/>} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

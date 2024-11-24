@@ -31,17 +31,17 @@ export default function Navbar() {
     >
       <nav className="flex items-center w-full h-full">
         {/* Menú móvil */}
-        <div className="w-full h-full md:hidden">
+        <div className="w-full h-full lg:hidden">
           <NavbarMobile menus={NavbarItems} />
         </div>
 
-        <div className="items-center justify-between hidden w-full p-4 text-sm md:flex">
+        <div className="items-center justify-between hidden w-full p-4 text-sm lg:flex">
           {/* Logo */}
           <Link to="/" className="z-[999] items-center gap-x-3">
             <img
               src={scrollPosition < 250 ? UtnLogoBlanco : UtnLogo}
               alt="Logo de la Universidad Tecnológica Nacional"
-              className="w-24 h-24"
+              className="w-24"
             />
           </Link>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
           </ul>
 
 
-          <div className="w-[150px] h-fit justify-end flex">
+          <div className="flex justify-end">
             <Contacto />
           </div>
 

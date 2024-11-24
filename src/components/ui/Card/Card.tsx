@@ -23,11 +23,11 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <motion.div
-      className={`flex items-center justify-start px-5 py-3 cursor-pointer rounded-3xl ${customStyles}  ${
+      className={`flex items-center justify-start p-5 gap-y-4 cursor-pointer rounded-3xl ${customStyles}  ${
         titleLink ? "md:flex-row gap-4 flex-col" : "flex-col"
       }`}
       whileHover={{
-        scale: 1.05,
+        scale: 1.02,
         translateY: -5,
         boxShadow: "0px 15px 35px rgba(0, 0, 0, 0.2)",
       }}
@@ -42,7 +42,7 @@ const Card: React.FC<CardProps> = ({
       </div>
 
       {title && (
-        <div className="flex items-center justify-center text-center">
+        <div className="flex items-center justify-center w-full text-center md:text-start">
           {titleLink ? (
             <Link
               to={titleLink}
@@ -51,13 +51,13 @@ const Card: React.FC<CardProps> = ({
               {title}
             </Link>
           ) : (
-            <span className="block mb-2 text-xl font-semibold">{title}</span>
+            <span className="block mb-2 text-xl font-semibold text-center">{title}</span>
           )}
         </div>
       )}
 
       {links && links.length > 0 && (
-        <ul className="space-y-2 text-center">
+        <ul className="w-full space-y-2 text-center">
           {links.map(({ title, url }, index) => (
             <li key={index} className="text-base font-medium">
               {extraText && <span className="font-semibold">{extraText}</span>}

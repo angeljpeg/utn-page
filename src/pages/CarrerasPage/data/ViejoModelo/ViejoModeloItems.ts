@@ -1,4 +1,4 @@
-// PDFS
+// PDFS & IMAGES
 // TI
 import PDF_TI from '/pdfs/carreras/viejoModelo/ing_TecnologiasInformacion.pdf'
 // MECATRONICA

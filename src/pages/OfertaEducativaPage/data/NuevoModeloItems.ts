@@ -21,6 +21,7 @@ import EnergySavingsLeafRoundedIcon from '@mui/icons-material/EnergySavingsLeafR
 
 export interface Area {
   title: string;
+  url: string;
 }
 
 export interface NuevoModelo {
@@ -31,6 +32,7 @@ export interface NuevoModelo {
 }
 
 export const NuevoModeloItems: NuevoModelo[] = [
+  // Licenciatura en Ingeniería en Tecnologías de la Información e Innovación Digital
   {
     id: 1,
     title:
@@ -38,78 +40,95 @@ export const NuevoModeloItems: NuevoModelo[] = [
     area: [
       {
         title: "TSU en Desarrollo de Software Multiplataforma",
+        url: "desarrollo-software"
       },
       {
         title: "TSU en Inteligencia Artificial",
+        url: "inteligencia-artificial"
       },
     ],
     icon: ComputerOutlinedIcon,
   },
+  // Licenciatura en Ingeniería Mecatrónica
   {
     id: 2,
     title: "Licenciatura en Ingeniería Mecatrónica",
     area: [
       {
         title: "TSU en Automatización",
+        url: "automatizacion"
       },
       {
         title: "TSU en Robótica",
+        url: "robotica"
       },
     ],
     icon: PrecisionManufacturingRoundedIcon,
   },
+  // Licenciatura en Negocios y Mercadotecnia
   {
     id: 3,
     title: "Licenciatura en Negocios y Mercadotecnia",
     area: [
       {
-        title: "TSU en Mercadotecnia"
+        title: "TSU en Mercadotecnia",
+        url: "mercadotecnia"
       },
       {
-        title: "TSU en ventas"
+        title: "TSU en ventas",
+        url: "ventas",
       }
     ],
     icon: PublicRoundedIcon
   },
+  // Licenciatura en Ingeniería Aeronáutica en Manufactura
   {
     id: 4,
     title: "Licenciatura en Ingeniería Aeronáutica en Manufactura",
     area: [
       {
         title: "TSU en Mantenimiento Industrial",
+        url: "mantenimiento-industrial"
       },
     ],
     icon: AirplanemodeActiveIcon,
   },
+  // Licenciatura en Ingeniería Industrial
   {
     id: 5,
     title: "Licenciatura en Ingeniería Industrial",
     area: [
       {
         title: "TSU en Procesos Productivos",
+        url: "procesos-productivos"
       },
       {
         title: "TSU en Maquinados de Precisión",
+        url: "maquinados-precision"
       },
     ],
     icon: FactoryIcon,
   },
+  // Licenciatura en Ingeniería en Logística Internacional
   {
     id: 6,
     title: "Licenciatura en Ingeniería en Logística Internacional",
     area: [
       {
         title: "TSU en Operaciones Logísticas y Comercio Exterior",
+        url: "logistica-internacional"
       },
     ],
     icon: EqualizerOutlinedIcon,
   },
+  // Licenciatura en Ingeniería en Mantenimiento Industrial
   {
     id: 7,
     title: "Licenciatura en Ingeniería en Mantenimiento Industrial",
     area: [
       {
         title: "TSU en Mantenimiento Industrial",
+        url: "mantenimiento-industrial"
       },
     ],
     icon: HandymanRoundedIcon,
@@ -120,9 +139,11 @@ export const NuevoModeloItems: NuevoModelo[] = [
     area: [
       {
         title: "TSU en Energía Solar",
+        url: "energia-solar"
       },
       {
         title: "TSU en Energía Turbo-Solar",
+        url: "energia-turbo-solar"
       },
     ],
     icon: EnergySavingsLeafRoundedIcon,

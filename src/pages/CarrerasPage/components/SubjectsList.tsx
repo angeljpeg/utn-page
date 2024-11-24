@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import { Iquarters } from "../data/ViejoModelo/TsuItems";
+import { Iquarters } from "../data/ViejoModelo/ViejoModeloItems";
 
 interface SubjectsListProps {
   title: string;
@@ -9,21 +9,21 @@ interface SubjectsListProps {
 }
 
 export default function SubjectsList({ title, quarters }: SubjectsListProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(); // Estado para manejar el acordeón
+  const [activeIndex, setActiveIndex] = useState<number | null>();
 
   const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index); // Alterna la expansión y contracción
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <section className="w-full py-6 cursor-default h-fit">
-      <div className="w-full px-4 mx-auto sm:px-6 lg:px-8">
-        <h2 className="mt-8 mb-6 text-2xl font-semibold text-center text-green-600 sm:text-3xl">
+    <section className="w-full py-10 cursor-default h-fit bg-gray-50">
+      <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <h2 className="mb-8 text-3xl font-bold text-center text-green-600 sm:text-4xl">
           {title}
         </h2>
-        <ul className="grid grid-cols-1 gap-4 text-gray-800 sm:gap-6 justify-items-stretch md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-6 text-gray-800 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {quarters.map(({ quarter, title, subjects }, quarterIndex) => (
-            <li key={quarter} className="flex w-full h-full">
+            <li key={quarterIndex} className="flex w-full h-full">
               <motion.div
                 className="w-full"
                 initial={{ opacity: 0, y: 10 }}
@@ -32,37 +32,48 @@ export default function SubjectsList({ title, quarters }: SubjectsListProps) {
                 viewport={{ once: true }}
               >
                 <div
-                  className="flex items-center justify-between p-4 bg-gray-100 rounded-lg shadow-md cursor-pointer hover:shadow-lg"
-                  onClick={() => toggleAccordion(quarterIndex)} // Maneja el clic para alternar
+                  className="flex items-center justify-between p-5 transition-shadow duration-300 bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer hover:shadow-md"
+                  onClick={() => toggleAccordion(quarterIndex)}
+                  role="button"
+                  aria-expanded={activeIndex === quarterIndex}
                 >
-                  <h3 className="text-lg font-semibold">{title}</h3>{" "}
-                  {/* Título con el número del cuatrimestre */}
-                  <span>{activeIndex === quarterIndex ? "-" : "+"}</span>{" "}
-                  {/* Muestra + o - según el estado */}
+                  <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+                  <motion.span
+                    className="text-2xl font-bold text-gray-500"
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: activeIndex === quarterIndex ? 45 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    +
+                  </motion.span>
                 </div>
                 <motion.div
-                  className="overflow-hidden bg-gray-50"
+                  className="overflow-hidden bg-gray-100"
                   initial={{ height: 0 }}
                   animate={{
-                    height: activeIndex === quarterIndex ? "auto" : 0, // Alterna entre auto y 0
+                    height: activeIndex === quarterIndex ? "auto" : 0,
                   }}
-                  transition={{ duration: 0.3 }} // Duración de la animación
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                 >
                   <motion.ul
-                    className="flex flex-col p-4"
+                    className="flex flex-col p-5 space-y-2"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.4 }}
                   >
                     {subjects.map((subject, index) => (
                       <motion.li
                         key={index}
-                        className="flex items-center mb-2"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: index * 0.1, duration: 0.2 }}
+                        className="flex items-center p-2 transition-colors rounded-md hover:bg-gray-200"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: index * 0.1,
+                          duration: 0.3,
+                          ease: "easeOut",
+                        }}
                       >
-                        <span className="flex-1 text-base">{subject}</span>
+                        <span className="flex-1 font-medium text-gray-700">{subject}</span>
                       </motion.li>
                     ))}
                   </motion.ul>
