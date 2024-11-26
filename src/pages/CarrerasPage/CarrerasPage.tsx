@@ -78,8 +78,19 @@ export default function CarrerasPage({
 
         {actionField && <ActionFields fields={actionField.actionFields} />}
 
-        <SubjectsList title={subjectListTitleTSU} quarters={degreeTSU.quarters} />
-        <SubjectsList title={subjectListTitleING} quarters={degreeING.quarters} />
+        {degreeTSU.quarters.length > 0 && (
+          <SubjectsList
+            title={subjectListTitleTSU}
+            quarters={degreeTSU.quarters}
+          />
+        )}
+
+        {degreeING.quarters.length > 0 && (
+          <SubjectsList
+            title={subjectListTitleING}
+            quarters={degreeING.quarters}
+          />
+        )}
 
         {degreeTSU.pdf && <PDFDownloadButton pdfUrl={degreeTSU.pdf} />}
       </div>

@@ -8,15 +8,36 @@ import BANNER_INTELIGENCIA_ARTIFICIAL from "@/assets/images/carreras/desarrollo_
 //  Automatización --> 2
 import PDF_AUTOMATIZACION from "/pdfs/carreras/nuevoModelo/automatizacion.pdf";
 import BANNER_AUTOMATIZACION from "@/assets/images/carreras/mecatronica/automatizacion.webp";
-//  Automatización --> 2
+//  Automatización --> 3
 import PDF_ROBOTICA from "/pdfs/carreras/nuevoModelo/robotica.pdf";
 import BANNER_ROBOTICA from "@/assets/images/carreras/mecatronica/robotica.webp";
 //  Mercadotecnia --> 4
 import PDF_MERCADOTECNIA from "/pdfs/carreras/nuevoModelo/mercadotecnia_bis.pdf";
 import BANNER_MERCADOTECNIA from "@/assets/images/carreras/mercadotecnia/mercadotecnia.webp";
-//  Mercadotecnia --> 5
+//  Ventas --> 5
 import PDF_VENTAS from "/pdfs/carreras/nuevoModelo/ventas_bis.pdf";
 import BANNER_VENTAS from "@/assets/images/carreras/mercadotecnia/ventas.webp";
+//  Aeronáutica --> 6
+import PDF_AERONAUTICA from "/pdfs/carreras/nuevoModelo/manufactura_aeronautica.pdf";
+import BANNER_AERONAUTICA from "@/assets/images/carreras/aeronautica/aeronautica.webp";
+//  Procesos productivos --> 7
+import PDF_PROCESOS from "/pdfs/carreras/nuevoModelo/procesos_productivos.pdf";
+import BANNER_PROCESOS from "@/assets/images/carreras/mecatronica/automatizacion.webp";
+//  Maquinados de Precisión --> 8
+import PDF_MAQUINADOS from "/pdfs/carreras/nuevoModelo/maquinados_precision.pdf";
+import BANNER_MAQUINADOS from "@/assets/images/carreras/industrial/maquinados.webp";
+//  Operaciones Logísticas y Comercio Exterior --> 9
+import PDF_LOGISTICA from "/pdfs/carreras/nuevoModelo/comercio_logistica.pdf";
+import BANNER_LOGISTICA from "@/assets/images/carreras/logistica/logistica.webp";
+//  TSU Mantenimiento Industrial --> 10
+import PDF_MANTENIMIENTO from "/pdfs/carreras/nuevoModelo/mantenimiento_industrial.pdf";
+import BANNER_MANTENIMIENTO from "@/assets/images/carreras/industrial/mantenimiento.webp";
+//  Energía Solar --> 11
+import PDF_SOLAR from "/pdfs/carreras/nuevoModelo/energia_solar.pdf";
+import BANNER_SOLAR from "@/assets/images/carreras/energia/energia_solar.webp";
+//  Energía Turbo-Solar --> 12
+import PDF_TURBO_SOLAR from "/pdfs/carreras/nuevoModelo/energia_turbo_solar.pdf";
+import BANNER_TURBO_SOLAR from "@/assets/images/carreras/energia/energia_solar.webp";
 
 export const degreesNew = [
   //TSU Desarrollo de Software Multiplataforma --> 0
@@ -543,6 +564,8 @@ export const degreesNew = [
     id: 6,
     idForeign: 16,
     title: "Manufactura Aeronáutica",
+    pdf: PDF_AERONAUTICA,
+    img: BANNER_AERONAUTICA,
     area: "",
     type: "tsu",
     competencies: [],
@@ -623,6 +646,8 @@ export const degreesNew = [
   {
     id: 7,
     idForeign: 17,
+    pdf: PDF_PROCESOS,
+    img: BANNER_PROCESOS,
     title: "Procesos productivos",
     area: "",
     type: "tsu",
@@ -705,13 +730,16 @@ export const degreesNew = [
     id: 8,
     idForeign: 17,
     title: "Maquinados de Precisión",
+    pdf: PDF_MAQUINADOS,
+    img: BANNER_MAQUINADOS,
     area: "",
     type: "tsu",
     competencies: [],
     quarters: [
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "FUNDAMENTOS MATEMÁTICOS",
@@ -722,8 +750,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "CÁLCULO DIFERENCIAL",
@@ -734,8 +763,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "CÁLCULO INTEGRAL",
@@ -746,8 +776,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "CÁLCULO DE VARIAS VARIABLES",
@@ -758,8 +789,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "ECUACIONES DIFERENCIALES",
@@ -770,7 +802,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -779,13 +813,17 @@ export const degreesNew = [
     id: 9,
     idForeign: 18,
     title: "Operaciones Logísticas y Comercio Exterior",
+    pdf: PDF_LOGISTICA,
+    img: BANNER_LOGISTICA,
     area: "",
     type: "tsu",
     competencies: [],
     quarters: [
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
+
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "FUNDAMENTOS MATEMÁTICOS",
@@ -796,8 +834,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "CÁLCULO DIFERENCIAL",
@@ -808,8 +847,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "CÁLCULO INTEGRAL",
@@ -820,8 +860,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "CÁLCULO DE VARIAS VARIABLES",
@@ -832,8 +873,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "ECUACIONES DIFERENCIALES",
@@ -844,7 +886,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -853,13 +897,16 @@ export const degreesNew = [
     id: 10,
     idForeign: 19,
     title: "Mantenimiento Industrial",
+    pdf: PDF_MANTENIMIENTO,
+    img: BANNER_MANTENIMIENTO,
     area: "",
     type: "tsu",
     competencies: [],
     quarters: [
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "FUNDAMENTOS MATEMÁTICOS",
@@ -870,8 +917,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "CÁLCULO DIFERENCIAL",
@@ -882,8 +930,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "CÁLCULO INTEGRAL",
@@ -894,8 +943,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "CÁLCULO DE VARIAS VARIABLES",
@@ -906,8 +956,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "ECUACIONES DIFERENCIALES",
@@ -918,7 +969,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -927,13 +980,16 @@ export const degreesNew = [
     id: 11,
     idForeign: 20,
     title: "Energía Solar",
+    pdf: PDF_SOLAR,
+    img: BANNER_SOLAR,
     area: "",
     type: "tsu",
     competencies: [],
     quarters: [
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "FUNDAMENTOS MATEMÁTICOS",
@@ -944,8 +1000,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "CÁLCULO DIFERENCIAL",
@@ -956,8 +1013,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "CÁLCULO INTEGRAL",
@@ -968,8 +1026,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "CÁLCULO DE VARIAS VARIABLES",
@@ -980,8 +1039,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "ECUACIONES DIFERENCIALES",
@@ -992,7 +1052,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -1001,13 +1063,16 @@ export const degreesNew = [
     id: 12,
     idForeign: 21,
     title: "Energía Turbo-Solar",
+    pdf: PDF_TURBO_SOLAR,
+    img: BANNER_TURBO_SOLAR,
     area: "",
     type: "tsu",
     competencies: [],
     quarters: [
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "FUNDAMENTOS MATEMÁTICOS",
@@ -1018,8 +1083,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 1,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "CÁLCULO DIFERENCIAL",
@@ -1030,8 +1096,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 1,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "CÁLCULO INTEGRAL",
@@ -1042,8 +1109,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 1,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "CÁLCULO DE VARIAS VARIABLES",
@@ -1054,8 +1122,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 1,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "ECUACIONES DIFERENCIALES",
@@ -1066,7 +1135,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 1,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -1104,7 +1175,7 @@ export const degreesNew = [
         ],
       },
       {
-        qurater: 9,
+        quarter: 9,
         title: "9no. Cuatrimestre",
         subjects: [
           "INGLÉS VIII",
@@ -1290,8 +1361,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 7,
+        title: "7mo. Cuatrimestre",
         subjects: [
-          "7mo. Cuatrimestre",
           "INGLÉS VI",
           "HABILIDADES GERENCIALES",
           "INGENIERÍA DE PLANTA",
@@ -1302,8 +1374,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 8,
+        title: "8vo. Cuatrimestre",
         subjects: [
-          "8vo. Cuatrimestre",
           "INGLÉS VII",
           "SISTEMAS DE GESTIÓN DE LA CALIDAD",
           "LOGÍSTICA",
@@ -1314,8 +1387,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 9,
+        title: "9no. Cuatrimestre",
         subjects: [
-          "9no. Cuatrimestre",
           "INGLÉS VIII",
           "LEGISLACIÓN INDUSTRIAL",
           "ADMINISTRACIÓN INDUSTRIAL Y DE SERVICIOS",
@@ -1326,7 +1400,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["10mo. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 10,
+        title: "10mo. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -1338,8 +1414,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 7,
+        title: "7mo. Cuatrimestre",
         subjects: [
-          "7mo. Cuatrimestre",
           "INGLÉS VI",
           "HABILIDADES GERENCIALES",
           "ENVASE, EMPAQUE, EMBALAJE",
@@ -1350,8 +1427,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 8,
+        title: "8vo. Cuatrimestre",
         subjects: [
-          "8vo. Cuatrimestre",
           "INGLÉS VII",
           "ADMINISTRACIÓN DE OPERACIONES DE TRÁFICO I",
           "INVESTIGACIÓN DE OPERACIONES",
@@ -1362,8 +1440,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 9,
+        title: "9no. Cuatrimestre",
         subjects: [
-          "9no. Cuatrimestre",
           "INGLÉS VIII",
           "ADMINISTRACIÓN DE OPERACIONES DE TRÁFICO II",
           "LOGÍSTICA DE TRANSPORTE",
@@ -1373,7 +1452,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["10mo. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 10,
+        title: "10mo. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -1385,8 +1466,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 7,
+        title: "7mo. Cuatrimestre",
         subjects: [
-          "7mo. Cuatrimestre",
           "INGLÉS VI",
           "HABILIDADES GERENCIALES",
           "FÍSICA PARA INGENIERÍA",
@@ -1397,8 +1479,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 8,
+        title: "8vo. Cuatrimestre",
         subjects: [
-          "8vo. Cuatrimestre",
           "INGLÉS VII",
           "INGENIERÍA ECONÓMICA",
           "MANTENIMIENTO PREDICTIVO MECÁNICO",
@@ -1409,8 +1492,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 9,
+        title: "9no. Cuatrimestre",
         subjects: [
-          "9no. Cuatrimestre",
           "INGLÉS VIII",
           "GESTIÓN AMBIENTAL",
           "MANUFACTURA ASISTIDA POR COMPUTADORA",
@@ -1421,6 +1505,8 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 10,
+        title: "10mo. Cuatrimestre",
         subjects: ["10mo. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
@@ -1433,8 +1519,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 7,
+        title: "7mo. Cuatrimestre",
         subjects: [
-          "7mo. Cuatrimestre",
           "INGLÉS VI",
           "HABILIDADES GERENCIALES",
           "SISTEMAS DE ADQUISICIÓN DE DATOS",
@@ -1445,8 +1532,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 8,
+        title: "8vo. Cuatrimestre",
         subjects: [
-          "8vo. Cuatrimestre",
           "INGLÉS VII",
           "INGENIERÍA DE LA BIOMASA",
           "SISTEMAS DE GENERACIÓN DISTRIBUIDOS",
@@ -1457,8 +1545,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 9,
+        title: "9no. Cuatrimestre",
         subjects: [
-          "9no. Cuatrimestre",
           "INGLÉS VIII",
           "DISEÑO DE PROYECTOS EÓLICOS",
           "MODELADO Y SIMULACIÓN DE SISTEMAS EN ENERGÍAS RENOVABLES",
@@ -1469,7 +1558,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["10mo. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 10,
+        title: "10mo. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -1481,8 +1572,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 7,
+        title: "7mo. Cuatrimestre",
         subjects: [
-          "7mo. Cuatrimestre",
           "INGLÉS VI",
           "HABILIDADES GERENCIALES",
           "SISTEMAS DE ADQUISICIÓN DE DATOS",
@@ -1493,8 +1585,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 8,
+        title: "8vo. Cuatrimestre",
         subjects: [
-          "8vo. Cuatrimestre",
           "INGLÉS VII",
           "INGENIERÍA DE LA BIOMASA",
           "OPTATIVA II",
@@ -1505,8 +1598,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 9,
+        title: "9no. Cuatrimestre",
         subjects: [
-          "9no. Cuatrimestre",
           "INGLÉS VIII",
           "DISEÑO DE PROYECTOS EÓLICOS",
           "OPTATIVA IV",
@@ -1517,7 +1611,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["10mo. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 10,
+        title: "10mo. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },

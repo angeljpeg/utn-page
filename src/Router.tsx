@@ -95,6 +95,22 @@ export const AppRouter = () => {
           path="nuevoModelo/maquinados-precision"
           element={<CarrerasPage carreraIndex={8} isNewModel={true} />}
         />
+        <Route
+          path="nuevoModelo/logistica-internacional"
+          element={<CarrerasPage carreraIndex={9} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/mantenimiento-industrial"
+          element={<CarrerasPage carreraIndex={10} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/energia-solar"
+          element={<CarrerasPage carreraIndex={11} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/energia-turbo-solar"
+          element={<CarrerasPage carreraIndex={12} isNewModel={true} />}
+        />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
