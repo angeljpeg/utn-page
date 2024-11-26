@@ -1,50 +1,14 @@
 import { Link } from "react-router-dom";
-import { BiCertification } from "react-icons/bi";
-import { MdCastForEducation } from "react-icons/md";
-import { SlNotebook } from "react-icons/sl";
-import PropTypes from "prop-types";
-import "./styles.css";
-
-function GenerateIconsText({ title, icon: Icon }) {
-  return (
-    <div className="flex w-fit items-center gap-2 text-white text hover:scale-[1.04] duration-200">
-      <Icon className="text-xl lg:text-3xl md:text-2xl" />
-      <Link className="font-medium lg:text-xl md:text-lg">{title}</Link>
-    </div>
-  );
-}
+import OfertaEducativa from '../OfertaEducativa/OfertaEducativaPage'
 
 export default function HomePage() {
   return (
     <section className="w-full">
-      <div className="relative w-full h-[100vh]">
-        <img
-          src="https://blog.orange.es/wp-content/uploads/sites/4/2024/03/fondos-de-pantalla-3d-paisaje.jpg"
-          alt="imagen"
-          className="object-cover w-full h-full"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/50"></div>
-      </div>
-
-      <div className="absolute flex justify-center w-full transform -translate-y-1/2 ">
-        <header className=" mx-6 items-center gap-8 px-6 py-12 shadow-xl rounded-lg animate-animated-gradient bg-gradient-to-br from-lime-500 via-green-500 to-lime-500 bg-[length:200%_200%] displayHeader lg:gap-10">
-          <GenerateIconsText
-            title={"Certificación de competencias"}
-            icon={BiCertification}
-          />
-          <GenerateIconsText
-            title={"Educación continua"}
-            icon={MdCastForEducation}
-          />
-          <GenerateIconsText
-            title={"Informe Anual de Resultados 2023"}
-            icon={SlNotebook}
-          />
-        </header>
-      </div>
-
       <main className="min-h-screen pt-24">
+        {/* Oferta educativa */}
+        <h2 className="pt-24 text-4xl font-medium text-center text-gray-900">Oferta educativa</h2>
+        <OfertaEducativa />
+
         {/* Documentos y servicios - Redirección a cuadrícula de links */}
         <div className="w-full bg-gray-100 h-fit">
           <div className="items-center justify-center block w-full gap-4 px-6 py-12 m-auto h-fit lg:flex lg:w-3/4 lg:px-0">
@@ -58,7 +22,7 @@ export default function HomePage() {
                 programa institucional, transparencia, entre otros.
               </p>
               <button className="px-2 py-3 text-white transition duration-300 ease-out bg-green-400 rounded-lg shadow-md hover:bg-green-500 ">
-                <Link>Ver más</Link>
+                <Link to="/documentos-servicios">Ver más</Link>
               </button>
             </div>
             <div className="mt-4 w-[300px] h-[300px] lg:mt-0 lg:w-[350px] lg:h-[350px] md:w-[400px] md:h-[400px] md:m-auto">
@@ -82,7 +46,3 @@ export default function HomePage() {
     </section>
   );
 }
-
-GenerateIconsText.propTypes = {
-  title: PropTypes.string.isRequired,
-};

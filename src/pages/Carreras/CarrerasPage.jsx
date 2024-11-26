@@ -21,9 +21,9 @@ export default function CarrerasPage() {
 
   return (
     <>
-      <div className="absolute text-center transform -translate-x-1/2 -translate-y-1/2 left-1/2">
+      {/* <div className="absolute text-center transform -translate-x-1/2 -translate-y-1/2 left-1/2">
         <Header title={`TSU en ${degreeTSU.title}`} />
-      </div>
+      </div> */}
       <section className="flex flex-col items-center justify-center w-full min-h-screen pt-20 pb-10">
         <DegreeCompetencies
           title={degreeTSU.title}

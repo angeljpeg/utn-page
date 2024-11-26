@@ -4,6 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        verdesitos: {
+          50: ""
+        },
         primary: {
           DEFAULT: "#80c851",
           50: "#f2faeb",
