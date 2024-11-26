@@ -1,21 +1,13 @@
 // Components
-import { ScrollToUp, Navbar, Footer } from "@/shared";
+import { ScrollToUp, Footer } from "@/shared";
 import { Carousel } from "@/components/Home";
 import { Link } from "react-router-dom";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
-import SchoolIcon from "@mui/icons-material/School";
 // Slides
 
 // Slides - Images
-import slide1 from "@/assets/images/slider/uni1.webp";
-import slide2 from "@/assets/images/slider/uni2.webp";
-import slide3 from "@/assets/images/slider/uni3.webp";
-import slide4 from "@/assets/images/slider/uni4.webp";
-import slide5 from "@/assets/images/slider/uni5.webp";
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 
-const SLIDES = [slide1, slide2, slide3, slide4, slide5];
 
 function GenerateIconsText({
   title,
@@ -40,8 +32,6 @@ function GenerateIconsText({
 export default function HomePage() {
   return (
     <section className="w-full">
-      <Navbar />
-      <Carousel urls={SLIDES} />
       <main className="min-h-screen py-96 center-container">
         <ScrollToUp />
       </main>

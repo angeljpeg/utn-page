@@ -1,6 +1,14 @@
 import { create } from "zustand";
 
-export const IsHomeStore = create((set) => ({
+export interface HomeStoreState {
+  isHome: boolean;
+}
+
+export interface HomeStoreActions {
+  updateHome: () => void;
+}
+
+export const UseHomeStore = create((set) => ({
   isHome: false,
   updateHome: (newHome) => set({ isHome: true }),
 }));
