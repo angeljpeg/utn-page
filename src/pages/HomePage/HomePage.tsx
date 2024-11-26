@@ -42,25 +42,6 @@ export default function HomePage() {
     <section className="w-full">
       <Navbar />
       <Carousel urls={SLIDES} />
-{/*       <div className="absolute flex justify-center w-full transform -translate-y-1/2">
-        <header className="mx-6 flex items-center gap-8 px-6 py-12 shadow-xl rounded-lg animate-animated-gradient bg-gradient-to-br from-lime-500 via-green-500 to-lime-500 bg-[length:200%_200%] displayHeader lg:gap-10">
-          <GenerateIconsText
-            title="Certificación de competencias"
-            icon={SchoolIcon}
-            to="/certification"
-          />
-          <GenerateIconsText
-            title="Educación continua"
-            icon={SchoolIcon}
-            to="/education"
-          />
-          <GenerateIconsText
-            title="Informe Anual de Resultados 2023"
-            icon={AutoStoriesIcon}
-            to="/report-2023"
-          />
-        </header>
-      </div> */}
       <main className="min-h-screen py-96 center-container">
         <ScrollToUp />
       </main>
