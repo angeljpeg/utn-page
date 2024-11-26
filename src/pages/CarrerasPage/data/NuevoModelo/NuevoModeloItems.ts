@@ -8,6 +8,15 @@ import BANNER_INTELIGENCIA_ARTIFICIAL from "@/assets/images/carreras/desarrollo_
 //  Automatización --> 2
 import PDF_AUTOMATIZACION from "/pdfs/carreras/nuevoModelo/automatizacion.pdf";
 import BANNER_AUTOMATIZACION from "@/assets/images/carreras/mecatronica/automatizacion.webp";
+//  Automatización --> 2
+import PDF_ROBOTICA from "/pdfs/carreras/nuevoModelo/robotica.pdf";
+import BANNER_ROBOTICA from "@/assets/images/carreras/mecatronica/robotica.webp";
+//  Mercadotecnia --> 4
+import PDF_MERCADOTECNIA from "/pdfs/carreras/nuevoModelo/mercadotecnia_bis.pdf";
+import BANNER_MERCADOTECNIA from "@/assets/images/carreras/mercadotecnia/mercadotecnia.webp";
+//  Mercadotecnia --> 5
+import PDF_VENTAS from "/pdfs/carreras/nuevoModelo/ventas_bis.pdf";
+import BANNER_VENTAS from "@/assets/images/carreras/mercadotecnia/ventas.webp";
 
 export const degreesNew = [
   //TSU Desarrollo de Software Multiplataforma --> 0
@@ -265,13 +274,16 @@ export const degreesNew = [
     id: 3,
     idForeign: 14,
     title: "Robótica",
+    pdf: PDF_ROBOTICA,
+    img: BANNER_ROBOTICA,
     area: "",
     type: "tsu",
     competencies: [],
     quarters: [
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "FUNDAMENTOS MATEMÁTICOS",
@@ -282,8 +294,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "CÁLCULO DIFERENCIAL",
@@ -294,8 +307,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "CÁLCULO INTEGRAL",
@@ -306,8 +320,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "CÁLCULO DE VARIAS VARIABLES",
@@ -318,8 +333,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "ECUACIONES DIFERENCIALES",
@@ -330,7 +346,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -339,13 +357,16 @@ export const degreesNew = [
     id: 4,
     idForeign: 15,
     title: "Mercadotecnia",
+    pdf: PDF_MERCADOTECNIA,
+    img: BANNER_MERCADOTECNIA,
     area: "",
     type: "tsu",
     competencies: [],
     quarters: [
       {
+        quarter: 0,
+        title: "Cuatrimestre 0",
         subjects: [
-          "Cuatrimestre 0",
           "INTRODUCCIÓN A LA LENGUA INGLESA",
           "DESARROLLO DE COMPETENCIAS GLOBALES",
           "DESARROLLO SOSTENIBLE",
@@ -353,8 +374,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "MERCADOTECNIA",
@@ -365,8 +387,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "ESTADÍSTICA I",
@@ -377,8 +400,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "LEGISLACIÓN COMERCIAL",
@@ -389,8 +413,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "MEZCLA PROMOCIONAL",
@@ -401,8 +426,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "LOGÍSTICA Y DISTRIBUCIÓN",
@@ -413,7 +439,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -422,13 +450,16 @@ export const degreesNew = [
     id: 5,
     idForeign: 15,
     title: "Ventas",
+    pdf: PDF_VENTAS,
+    img: BANNER_VENTAS,
     area: "",
     type: "tsu",
     competencies: [],
     quarters: [
       {
+        quarter: 0,
+        title: "Cuatrimestre 0",
         subjects: [
-          "Cuatrimestre 0",
           "INTRODUCCIÓN A LA LENGUA INGLESA",
           "DESARROLLO DE COMPETENCIAS GLOBALES",
           "DESARROLLO SOSTENIBLE",
@@ -436,8 +467,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "MERCADOTECNIA",
@@ -448,8 +480,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "ESTADÍSTICA I",
@@ -460,8 +493,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "LEGISLACIÓN COMERCIAL",
@@ -472,8 +506,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "MEZCLA PROMOCIONAL",
@@ -484,8 +519,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "LOGÍSTICA Y DISTRIBUCIÓN",
@@ -496,7 +532,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -510,8 +548,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "FUNDAMENTOS MATEMÁTICOS",
@@ -522,8 +561,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "CÁLCULO DIFERENCIAL",
@@ -534,8 +574,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "CÁLCULO INTEGRAL",
@@ -546,8 +587,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "CÁLCULO DE VARIAS VARIABLES",
@@ -558,8 +600,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "ECUACIONES DIFERENCIALES",
@@ -570,7 +613,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -584,8 +629,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 1,
+        title: "1er. Cuatrimestre",
         subjects: [
-          "1er. Cuatrimestre",
           "INGLÉS I",
           "DESARROLLO HUMANO Y VALORES",
           "FUNDAMENTOS MATEMÁTICOS",
@@ -596,8 +642,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 2,
+        title: "2do. Cuatrimestre",
         subjects: [
-          "2do. Cuatrimestre",
           "INGLÉS II",
           "HABILIDADES SOCIOEMOCIONALES Y MANEJO DE CONFLICTOS",
           "CÁLCULO DIFERENCIAL",
@@ -608,8 +655,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 3,
+        title: "3er. Cuatrimestre",
         subjects: [
-          "3er. Cuatrimestre",
           "INGLÉS III",
           "DESARROLLO DEL PENSAMIENTO Y TOMA DE DECISIONES",
           "CÁLCULO INTEGRAL",
@@ -620,8 +668,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 4,
+        title: "4to. Cuatrimestre",
         subjects: [
-          "4to. Cuatrimestre",
           "INGLÉS IV",
           "ÉTICA PROFESIONAL",
           "CÁLCULO DE VARIAS VARIABLES",
@@ -632,8 +681,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 5,
+        title: "5to. Cuatrimestre",
         subjects: [
-          "5to. Cuatrimestre",
           "INGLÉS V",
           "LIDERAZGO DE EQUIPOS DE ALTO DESEMPEÑO",
           "ECUACIONES DIFERENCIALES",
@@ -644,7 +694,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["6to. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 6,
+        title: "6to. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -1132,8 +1184,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 7,
+        title: "7mo. Cuatrimestre",
         subjects: [
-          "7mo. Cuatrimestre",
           "INGLÉS VI",
           "HABILIDADES GERENCIALES",
           "ESTADÍSTICA APLICADA A LOS NEGOCIOS",
@@ -1144,8 +1197,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 8,
+        title: "8vo. Cuatrimestre",
         subjects: [
-          "8vo. Cuatrimestre",
           "INGLÉS VII",
           "MERCADOTECNIA DIGITAL II",
           "INTELIGENCIA DE MERCADOS",
@@ -1156,8 +1210,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 9,
+        title: "9no. Cuatrimestre",
         subjects: [
-          "9no. Cuatrimestre",
           "INGLÉS VIII",
           "CULTURA EMPRENDEDORA",
           "CADENA DE SUMINISTRO",
@@ -1168,7 +1223,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["10mo. Cuatrimestre", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 10,
+        title: "10mo. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },
@@ -1180,8 +1237,9 @@ export const degreesNew = [
     competencies: [],
     quarters: [
       {
+        quarter: 7,
+        title: "7mo. Cuatrimestre",
         subjects: [
-          "VII CUATRIMESTRE",
           "INGLÉS VI",
           "HABILIDADES GERENCIALES",
           "TÓPICOS DE INGENIERÍA INDUSTRIAL I",
@@ -1192,8 +1250,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 8,
+        title: "8vo. Cuatrimestre",
         subjects: [
-          "VIII CUATRIMESTRE",
           "INGLÉS VII",
           "ENSAYOS NO DESTRUCTIVOS",
           "GESTIÓN DE PROYECTOS DE MANUFACTURA AERONÁUTICA I",
@@ -1204,8 +1263,9 @@ export const degreesNew = [
         ],
       },
       {
+        quarter: 9,
+        title: "9no. Cuatrimestre",
         subjects: [
-          "IX CUATRIMESTRE",
           "INGLÉS VIII",
           "EMPRENDIMIENTO E INNOVACIÓN",
           "GESTIÓN DE PROYECTOS DE MANUFACTURA AERONÁUTICA II",
@@ -1216,7 +1276,9 @@ export const degreesNew = [
         ],
       },
       {
-        subjects: ["X CUATRIMESTRE", "ESTADÍA EN EL SECTOR PRODUCTIVO"],
+        quarter: 10,
+        title: "10mo. Cuatrimestre",
+        subjects: ["ESTADÍA EN EL SECTOR PRODUCTIVO"],
       },
     ],
   },

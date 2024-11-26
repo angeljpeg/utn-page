@@ -4,12 +4,13 @@ import { BrowserRouter } from "react-router-dom";
 
 // Router
 import { AppRouter } from "./Router";
-
-import { Loader } from "@/shared";
+// Components
+import { Loader, AutoScroll } from "@/shared";
 
 function App() {
   return (
     <BrowserRouter>
+      <AutoScroll />
       <Suspense fallback={<Loader />}>
         <AppRouter />
       </Suspense>

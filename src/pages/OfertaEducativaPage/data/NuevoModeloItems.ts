@@ -87,8 +87,8 @@ export const NuevoModeloItems: NuevoModelo[] = [
     title: "Licenciatura en Ingeniería Aeronáutica en Manufactura",
     area: [
       {
-        title: "TSU en Mantenimiento Industrial",
-        url: "mantenimiento-industrial"
+        title: "TSU en Manufactura Aeronáutica",
+        url: "manufactura-aeronautica"
       },
     ],
     icon: AirplanemodeActiveIcon,
@@ -133,6 +133,7 @@ export const NuevoModeloItems: NuevoModelo[] = [
     ],
     icon: HandymanRoundedIcon,
   },
+  // Licenciatura en Ingeniería en Energía y Desarrollo Sostenible
   {
     id: 8,
     title: "Licenciatura en Ingeniería en Energía y Desarrollo Sostenible",

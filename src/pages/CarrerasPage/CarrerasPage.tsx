@@ -36,9 +36,6 @@ export default function CarrerasPage({
     degreeING.type === "ing" ? "Ingeniería" : "Licenciatura"
   } ${degreeING.title ? `en ${degreeING.title}` : ""}`;
 
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <section>
       {/* Image Section */}

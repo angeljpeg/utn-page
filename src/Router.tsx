@@ -59,10 +59,42 @@ export const AppRouter = () => {
         <Route path="test" element={<AuditoriaFederacion />} />
 
         {/* Rutas Carreras Nuevo Modelo */}
-        <Route path="nuevoModelo/desarrollo-software" element={<CarrerasPage carreraIndex={0} isNewModel={true}/>} />
-        <Route path="nuevoModelo/inteligencia-artificial" element={<CarrerasPage carreraIndex={1} isNewModel={true}/>} />
-        <Route path="nuevoModelo/automatizacion" element={<CarrerasPage carreraIndex={2} isNewModel={true}/>} />
-        <Route path="nuevoModelo/robotica" element={<CarrerasPage carreraIndex={3} isNewModel={true}/>} />
+        <Route
+          path="nuevoModelo/desarrollo-software"
+          element={<CarrerasPage carreraIndex={0} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/inteligencia-artificial"
+          element={<CarrerasPage carreraIndex={1} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/automatizacion"
+          element={<CarrerasPage carreraIndex={2} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/robotica"
+          element={<CarrerasPage carreraIndex={3} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/mercadotecnia"
+          element={<CarrerasPage carreraIndex={4} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/ventas"
+          element={<CarrerasPage carreraIndex={5} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/manufactura-aeronautica"
+          element={<CarrerasPage carreraIndex={6} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/procesos-productivos"
+          element={<CarrerasPage carreraIndex={7} isNewModel={true} />}
+        />
+        <Route
+          path="nuevoModelo/maquinados-precision"
+          element={<CarrerasPage carreraIndex={8} isNewModel={true} />}
+        />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
