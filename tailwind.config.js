@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         verdesitos: {
-          50: ""
+          50: "#fafffc"
         },
         primary: {
           DEFAULT: "#80c851",
