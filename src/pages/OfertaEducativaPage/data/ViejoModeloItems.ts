@@ -47,7 +47,7 @@ export const ViejoModeloItems : ViejoModeloItem[] = [
     },
     {
         id: 3,
-        ing: "Ing. Sistemas Productivos",
+        ing: "Lic. Innovación de Negocios y Mercadotecnia",
         tsu: "Desarrollo de Negocios",
         area: "Mercadotecnia.",
         link: "negocios",

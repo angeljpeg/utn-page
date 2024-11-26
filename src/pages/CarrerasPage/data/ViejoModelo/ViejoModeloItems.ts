@@ -1,16 +1,26 @@
 // PDFS & IMAGES
 // TI
 import PDF_TI from '/pdfs/carreras/viejoModelo/ing_TecnologiasInformacion.pdf'
+import BANNER_DESARROLLO_MULTIPLATAFORMA from "@/assets/images/carreras/desarrollo_software/desarrollo_1.webp";
 // MECATRONICA
 import PDF_MECATRONICA from "/pdfs/carreras/viejoModelo/ing_mecatronica.pdf"
+import BANNER_ROBOTICA from "@/assets/images/carreras/mecatronica/robotica.webp";
 // PROCESOS INDUSTRIALES
 import PDF_PROCESOS from '/pdfs/carreras/viejoModelo/ing_SistemasProductivos.pdf'
+import BANNER_PROCESOS from "@/assets/images/carreras/mecatronica/automatizacion.webp";
 // COMERCIO INTERNACIONAL
 import ING_COMERCIO from '/pdfs/carreras/viejoModelo/ing_logistica.pdf'
+import BANNER_LOGISTICA from "@/assets/images/carreras/logistica/logistica.webp";
 // ENERGIAS RENOVABLES
 import ING_ENERGIAS from '/pdfs/carreras/viejoModelo/ing_energiasRenovables.pdf'
+import BANNER_SOLAR from "@/assets/images/carreras/energia/energia_solar.webp";
 // AERONAUTICA
 import ING_AERONAUTICA from '/pdfs/carreras/viejoModelo/ing_aeronautica.pdf'
+import BANNER_AERONAUTICA from "@/assets/images/carreras/aeronautica/aeronautica.webp";
+// MERCADOTECNIA
+import BANNER_MERCADOTECNIA from "@/assets/images/carreras/mercadotecnia/mercadotecnia.webp";
+// MANTENIMIENTO INDUSTRIAL
+import BANNER_MANTENIMIENTO from "@/assets/images/carreras/industrial/mantenimiento.webp";
 
 export enum degreesTypes {
   TSU = "tsu",
@@ -41,7 +51,7 @@ export const degreesOld = [
     id: 0,
     idForeign: 8,
     title: "Tecnologías de la información",
-    img: "https://www.lumiun.com/blog/wp-content/uploads/technology-network-data-connection-network-marketing-cyber-security-concept.jpg",
+    img: BANNER_DESARROLLO_MULTIPLATAFORMA,
     pdf: PDF_TI,
     area: "Desarrollo de Software Multiplataforma",
     type: degreesTypes.TSU,
@@ -126,13 +136,13 @@ export const degreesOld = [
       },
     ],
   },
-  // TSU Mecatronica
+  //TSU Mecatronica
   {
     id: 1,
     idForeign: 9,
     title: "Mecatrónica",
     area: "Automatización",
-    img: "https://www.redmetal.es/wp-content/uploads/2021/03/img-ing-mecatronica-banner-1.jpg",
+    img: BANNER_ROBOTICA,
     pdf: PDF_MECATRONICA,
     type: degreesTypes.TSU,
     competencies: [
@@ -221,7 +231,7 @@ export const degreesOld = [
     id: 2,
     idForeign: 10,
     title: "Procesos Industriales",
-    img: "https://vzpumps.com/wp-content/uploads/2021/07/banner-7.jpg",
+    img: BANNER_PROCESOS,
     pdf: PDF_PROCESOS,
     area: "Manufactura",
     type: degreesTypes.TSU,
@@ -314,7 +324,7 @@ export const degreesOld = [
     id: 3,
     idForeign: 11,
     title: "Operaciones Comerciales Internacionales",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYpRAacG4n_9jeya8uM_QEPkARonQdVnumE-DxuX4CDZygdU5D1EPFn0uJs2OSoNB7w&usqp=CAU",
+    img: BANNER_LOGISTICA,
     area: "Clasificación Arancelaría y Despacho Aduanero",
     pdf: ING_COMERCIO,
     type: degreesTypes.TSU,
@@ -399,6 +409,7 @@ export const degreesOld = [
     id: 4,
     idForeign: 12,
     title: "Energías Renovables",
+    img: BANNER_SOLAR,
     pdf: ING_ENERGIAS,
     area: "Calidad y Ahorro de Energía",
     type: degreesTypes.TSU,
@@ -492,6 +503,7 @@ export const degreesOld = [
     id: 5,
     idForeign: 13,
     title: "Manufactura Aeronáutica",
+    img: BANNER_AERONAUTICA,
     pdf: ING_AERONAUTICA,
     area: "Maquinados de Precisión",
     type: degreesTypes.TSU,
@@ -583,6 +595,7 @@ export const degreesOld = [
     id: 6,
     idForeign: 14,
     title: "Mantenimiento Industrial",
+    img: BANNER_MANTENIMIENTO,
     area: "Industrial",
     type: degreesTypes.TSU,
     competencies: [
@@ -677,6 +690,7 @@ export const degreesOld = [
     id: 7,
     idForeign: 15,
     title: "Desarrollo de Negocios",
+    img: BANNER_MERCADOTECNIA,
     area: "Mercadotecnia",
     type: degreesTypes.TSU,
     competencies: [
