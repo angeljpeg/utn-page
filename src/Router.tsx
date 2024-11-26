@@ -10,7 +10,7 @@ import {
   TestPage,
   OfertaEducativaPage,
   CarrerasPage,
-  AuditoriaFederacion,
+  LegislacionUniversitariaPage,
 } from "@/pages";
 
 // Components
@@ -56,7 +56,6 @@ export const AppRouter = () => {
           path="viejoModelo/negocios"
           element={<CarrerasPage carreraIndex={7} />}
         />
-        <Route path="test" element={<AuditoriaFederacion />} />
 
         {/* Rutas Carreras Nuevo Modelo */}
         <Route
@@ -112,6 +111,8 @@ export const AppRouter = () => {
           element={<CarrerasPage carreraIndex={12} isNewModel={true} />}
         />
       </Route>
+      {/* PDFS ADMINISTRACION */}
+      <Route path="legislacion" element={<LegislacionUniversitariaPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
