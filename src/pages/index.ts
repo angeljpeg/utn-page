@@ -11,4 +11,6 @@ export const EducacionContinuaPage = React.lazy(() => import('./EducacionContinu
 export const SubsidiosPage = React.lazy(() => import('./SubsidiosPage/SubsidiosPage'))
 export const DirectorioPage = React.lazy(() => import('./DirectorioPage/DirectorioPage'))
 export const AcademiaMatematicasPage = React.lazy(() => import('./AcademiaMatematicasPage/AcademiaMatematicasPage'))
+export const BolsaTrabajoPage = React.lazy(() => import('./BolsaTrabajoPage/BolsaTrabajoPage'))
+export const EmprendedoresPage = React.lazy(() => import('./EmprendedoresPage/EmprendedoresPage'))
 export const TestPage = React.lazy(() => import("./TestPage/TestPage"))

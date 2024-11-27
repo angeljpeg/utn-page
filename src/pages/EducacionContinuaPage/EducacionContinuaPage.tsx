@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useHomeStore } from "@/store/RootStore";
 
 import OfertaImage from "@/assets/images/OfertaEducativa.webp";
+import ecst_logo from "@/assets/images/cuadriculaLogos/ecst_logo.webp";
 
 
 export default function EducacionContinuaPage() {
@@ -14,7 +15,7 @@ export default function EducacionContinuaPage() {
     }, [updateBanner, updateTitle]);
   return (
     <section className="w-full">
-      <main className="min-h-screen pt-24">
+      <main className="min-h-screen py-24">
         <div className="flex justify-center w-full mt-10 mb-12 h-fit">
           <div className="w-full px-4 h-fit lg:w-3/4 md:w-11/12">
             <h2 className="mb-2 text-base text-center lg:text-xl md:text-lg text-neutral-500">
@@ -25,7 +26,7 @@ export default function EducacionContinuaPage() {
             </h3>
             <div className="lg:flex lg:items-center">
               <img
-                src={OfertaImage}
+                src={ecst_logo}
                 alt="Imagen"
                 className="float-left mr-4 h-30 w-30 min-w-fit lg:h-full lg:w-20"
                 loading="lazy"
