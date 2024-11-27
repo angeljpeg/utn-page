@@ -49,10 +49,15 @@ export default function Carousel({ urls }: { urls: string[] }) {
   };
 
   const getIndicatorClass = (index: number) =>
-    `w-3 h-3 rounded-full duration-300 p-2 border ${index === imageIndex ? "bg-green-500/80 scale-110 border-green-500" : "bg-gray-400/80 scale-75 border-white"}`;
+    `w-3 h-3 rounded-full duration-300 p-2 border ${
+      index === imageIndex
+        ? "bg-green-500/80 scale-110 border-green-500"
+        : "bg-gray-400/80 scale-75 border-white"
+    }`;
 
   return (
     <div className="relative flex items-center justify-center w-full h-[115vh] overflow-hidden bg-black">
+      <div className="absolute top-0 left-0 z-10 w-full h-full pointer-events-none bg-gradient-to-t from-transparent to-black/70" />
       <div className="relative z-0 w-full h-full">
         <AnimatePresence custom={direction}>
           <motion.img
@@ -73,14 +78,14 @@ export default function Carousel({ urls }: { urls: string[] }) {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.5}
             onDragEnd={(_, info: PanInfo) => {
-              const swipe = info.offset.x > 100 ? -1 : info.offset.x < -100 ? 1 : 0;
+              const swipe =
+                info.offset.x > 100 ? -1 : info.offset.x < -100 ? 1 : 0;
               if (swipe !== 0) paginate(swipe);
             }}
             onAnimationComplete={handleAnimationComplete}
           />
         </AnimatePresence>
       </div>
-
       <button
         onClick={() => paginate(-1)}
         className="absolute z-10 p-2 text-white -translate-y-1/2 rounded-full top-1/2 left-5 bg-black/30 hover:bg-black/50"
@@ -108,7 +113,6 @@ export default function Carousel({ urls }: { urls: string[] }) {
           />
         ))}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/70" />
     </div>
   );
 }
