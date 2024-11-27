@@ -108,6 +108,7 @@ export default function Carousel({ urls }: { urls: string[] }) {
           />
         ))}
       </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/70" />
     </div>
   );
 }

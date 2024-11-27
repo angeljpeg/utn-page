@@ -49,7 +49,7 @@ export default function RootLayout() {
             loading="lazy"
           />
           {/* Gradiente superpuesto */}
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/70" />
         </div>
       )}
       {/* Encabezado */}
