@@ -1,4 +1,4 @@
-import PDF_programaInstitucional from "../../../public/pdfs/programaInstitucional/programaInstitucional.pdf";
+import PDF_programaInstitucional from "/pdfs/programaInstitucional/programaInstitucional.pdf";
 
 export default function FooterHome() {
   return (
