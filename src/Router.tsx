@@ -14,6 +14,7 @@ import {
   CuadriculaLogosPage,
   EducacionContinuaPage,
   SubsidiosPage,
+  DirectorioPage,
 } from "@/pages";
 
 // Components
@@ -27,7 +28,9 @@ export const AppRouter = () => {
         <Route path="certificaciones" element={<CertificacionesPage />} />
         <Route path="edu-continua" element={<EducacionContinuaPage />} />
         <Route path="algunos-logos" element={<CuadriculaLogosPage />} />
+        {/* UNIVERSIDAD */}
         <Route path="006-subsidios" element={<SubsidiosPage />} />
+        <Route path="directorio" element={<DirectorioPage />} />
 
         {/* CARRERAS */}
         <Route path="carreras" element={<CarrerasLayout />}>
