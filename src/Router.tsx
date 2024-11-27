@@ -28,9 +28,9 @@ export const AppRouter = () => {
     <Routes>
       <Route path="/" element={<RootLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="legislacion" element={<LegislacionUniversitariaPage />} />
         <Route path="algunos-logos" element={<CuadriculaLogosPage />} />
         {/* UNIVERSIDAD */}
+        <Route path="legislacion" element={<LegislacionUniversitariaPage />} />
         <Route path="006-subsidios" element={<SubsidiosPage />} />
         <Route path="directorio" element={<DirectorioPage />} />
         <Route path="art-36-2022" element={<Art36Page />} />
