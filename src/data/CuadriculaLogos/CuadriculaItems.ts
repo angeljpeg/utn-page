@@ -14,26 +14,33 @@ import Imagen13 from "@/assets/images/cuadriculaLogos/13.webp"
 import Imagen14 from "@/assets/images/cuadriculaLogos/14.webp"
 import Imagen15 from "@/assets/images/cuadriculaLogos/15.webp"
 
+//PDF
+import PDF_Acta_Instalacion from '/pdfs/cuadriculaLinks/comiteControlDesempenoInstitucional/Acta_Instalacion.pdf'
+import PDF_codigo_etica_estado_2022 from '/pdfs/navbar/codigo_etica_estado_2022.pdf'
+import PDF_programa_institucional from '/pdfs/cuadriculaLinks/programaInstitucional/programa_institucional.pdf'
+import PDF_Aviso_Privacidad_Integral_UTN from '/pdfs/cuadriculaLinks/avisoPrivacidad/Aviso_Privacidad_Integral_UTN.pdf'
+import PDF_cod_conducta from '/pdfs/navbar/cod_conducta.pdf'
+
 export const CuadriculaItems = [
   {
     imagen: Imagen1,
-    url: ""
+    pdf: PDF_Acta_Instalacion
   },
   {
     imagen: Imagen2,
-    url: ""
+    url: "contraloria-social"
   },
   {
     imagen: Imagen3,
-    url: ""
+    url: "igualdad"
   },
   {
     imagen: Imagen4,
-    url: ""
+    url: PDF_codigo_etica_estado_2022
   },
   {
     imagen: Imagen5,
-    url: ""
+    url: "plan-anual"
   },
   {
     imagen: Imagen6,
@@ -41,11 +48,11 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen7,
-    url: ""
+    url: "tramites-servicios"
   },
   {
     imagen: Imagen8,
-    url: ""
+    url: PDF_programa_institucional
   },
   {
     imagen: Imagen9,
@@ -57,7 +64,7 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen11,
-    url: ""
+    url: PDF_Aviso_Privacidad_Integral_UTN
   },
   {
     imagen: Imagen12,
@@ -65,11 +72,11 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen13,
-    url: ""
+    url: PDF_cod_conducta
   },
   {
     imagen: Imagen14,
-    url: ""
+    url: "certificaciones"
   },
   {
     imagen: Imagen15,
