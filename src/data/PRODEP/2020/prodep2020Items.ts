@@ -150,7 +150,7 @@ export const prodep2020Items = [
     ],
   },
   {
-    title: "",
+    title: "INFORME",
     files: [
       {
         title: "Informe del Comité de Contraloría Social (el llenado)",

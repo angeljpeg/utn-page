@@ -49,15 +49,6 @@ import PDF_AT_SFP_2020 from "/pdfs/cuadriculaLinks/PFCE/2020/quejasDenuncias/AT_
 
 export const pfce2020Items = [
   {
-    title: "",
-    files: [
-      {
-        title: "",
-        file: "",
-      },
-    ],
-  },
-  {
     title: "DOCUMENTOS",
     files: [
       {

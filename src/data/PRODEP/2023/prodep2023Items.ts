@@ -33,7 +33,7 @@ import PDF_DIRECT_DGUTyP_PRODEP_2023 from "/pdfs/cuadriculaLinks/PRODEP/2023/dir
 //Atención a quejas y denuncias
 import PDF_Quejas_Denuncias_IN1 from "/pdfs/cuadriculaLinks/PRODEP/2023/atencionQuejasDenuncias/Quejas_Denuncias_IN1.pdf";
 
-export const prodep2020Items = [
+export const prodep2023Items = [
   {
     title: "DOCUMENTOS",
     files: [

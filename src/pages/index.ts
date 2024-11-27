@@ -16,3 +16,8 @@ export const EmprendedoresPage = React.lazy(() => import('./EmprendedoresPage/Em
 export const Art36Page = React.lazy(() => import('./Art36Page/Art36Page'))
 export const TestPage = React.lazy(() => import("./TestPage/TestPage"))
 export const IgualdadPage = React.lazy(() => import("./IgualdadPage/IgualdadPage"))
+export const PlanAnualPage = React.lazy(() => import("./PlanAnualPage/PlanAnualPage"))
+export const ContraloriaSocialPage = React.lazy(() => import("./ContraloriaSocial/ContraloriaSocialPage"))
+export const Prodep2020Page = React.lazy(() => import("./ContraloriaSocial/Prodep2020"))
+export const Prodep2023Page = React.lazy(() => import("./ContraloriaSocial/Prodep2023"))
+export const Pfce2020Page = React.lazy(() => import("./ContraloriaSocial/Pfce2020Page"))

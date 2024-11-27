@@ -9,14 +9,14 @@ export default function GenerateIconsText({
   link,
 }: {
   title: string;
-  icon: OverridableComponent<SvgIconTypeMap<unknown, "svg">>;
+  icon: OverridableComponent<SvgIconTypeMap>;
   pdf?: string;
   link?: string;
 }) {
   return (
     <div className="flex items-center gap-2 text-white hover:scale-[1.04] duration-200">
-      <Icon className="text-xl lg:text-3xl md:text-2xl"/>
-      <LinkGenerator title={title} pdf={pdf} link={link} className="font-semibold text-white"/>
+      <Icon fontSize="medium"/>
+      <LinkGenerator title={title} pdf={pdf} link={link} className="text-xl font-semibold text-white"/>
     </div>
   );
 }

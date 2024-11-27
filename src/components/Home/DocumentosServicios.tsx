@@ -16,7 +16,7 @@ export default function DocumentosServicios() {
           </p>
           <Link
             className="inline-block px-2 py-3 text-white transition duration-300 ease-out bg-green-400 rounded-lg shadow-md hover:bg-green-500"
-            to="/documentos-servicios"
+            to="/algunos-logos"
           >
             Ver más
           </Link>

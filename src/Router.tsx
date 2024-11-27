@@ -19,7 +19,12 @@ import {
   BolsaTrabajoPage,
   EmprendedoresPage,
   Art36Page,
-  IgualdadPage
+  IgualdadPage,
+  PlanAnualPage,
+  ContraloriaSocialPage,
+  Prodep2020Page,
+  Prodep2023Page,
+  Pfce2020Page
 } from "@/pages";
 
 // Components
@@ -31,6 +36,11 @@ export const AppRouter = () => {
         <Route index element={<HomePage />} />
         <Route path="algunos-logos" element={<CuadriculaLogosPage />} />
         <Route path="igualdad" element={<IgualdadPage />} />
+        <Route path="plan-anual" element={<PlanAnualPage />} />
+        <Route path="contraloria-social" element={<ContraloriaSocialPage/>}/>
+        <Route path="prodep-2020" element={<Prodep2020Page/>}/>
+        <Route path="prodep-2023" element={<Prodep2023Page/>}/>
+        <Route path="pfce-2020" element={<Pfce2020Page/>}/>
         {/* UNIVERSIDAD */}
         <Route path="legislacion" element={<LegislacionUniversitariaPage />} />
         <Route path="006-subsidios" element={<SubsidiosPage />} />

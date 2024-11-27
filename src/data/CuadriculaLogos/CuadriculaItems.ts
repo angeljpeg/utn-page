@@ -17,7 +17,7 @@ import Imagen15 from "@/assets/images/cuadriculaLogos/15.webp"
 //PDF
 import PDF_Acta_Instalacion from '/pdfs/cuadriculaLinks/comiteControlDesempenoInstitucional/Acta_Instalacion.pdf'
 import PDF_codigo_etica_estado_2022 from '/pdfs/navbar/codigo_etica_estado_2022.pdf'
-import PDF_programa_institucional from '/pdfs/cuadriculaLinks/programaInstitucional/programa_institucional.pdf'
+import PDF_programa_institucional from '/pdfs/cuadriculaLinks/programaInstitucional/programaInstitucional.pdf'
 import PDF_Aviso_Privacidad_Integral_UTN from '/pdfs/cuadriculaLinks/avisoPrivacidad/Aviso_Privacidad_Integral_UTN.pdf'
 import PDF_cod_conducta from '/pdfs/navbar/cod_conducta.pdf'
 
@@ -36,7 +36,7 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen4,
-    url: PDF_codigo_etica_estado_2022
+    pdf: PDF_codigo_etica_estado_2022
   },
   {
     imagen: Imagen5,
@@ -48,11 +48,11 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen7,
-    url: "/tramites-servicios"
+    url: "https://www.sonora.gob.mx/servicios-y-tramites"
   },
   {
     imagen: Imagen8,
-    url: PDF_programa_institucional
+    pdf: PDF_programa_institucional
   },
   {
     imagen: Imagen9,
@@ -60,19 +60,19 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen10,
-    url: ""
+    url: "https://transparencia.sonora.gob.mx/informacion-publica/organismos/2/entidades/71/universidad-tecnologica-de-nogales"
   },
   {
     imagen: Imagen11,
-    url: PDF_Aviso_Privacidad_Integral_UTN
+    pdf: PDF_Aviso_Privacidad_Integral_UTN
   },
   {
     imagen: Imagen12,
-    url: ""
+    url: "https://www.plataformadetransparencia.org.mx/Inicio"
   },
   {
     imagen: Imagen13,
-    url: PDF_cod_conducta
+    pdf: PDF_cod_conducta
   },
   {
     imagen: Imagen14,
@@ -80,6 +80,6 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen15,
-    url: ""
+    url: "http://transparencia.esonora.gob.mx/Sonora/Transparencia/Poder+Ejecutivo/Entidades/Universidad+Tecnol%C3%B3gica+de+Nogales"
   },
 ]

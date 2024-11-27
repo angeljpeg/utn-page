@@ -3,7 +3,7 @@ import ItemGenerator from "./ItemGenerator";
 
 export default function Header() {
   return (
-    <div className="flex flex-col items-center gap-4 sm:flex-row">
+    <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
       {headerItems.map((item) => (
         <ItemGenerator
           title={item.title}
