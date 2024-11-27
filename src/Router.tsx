@@ -19,6 +19,7 @@ import {
   BolsaTrabajoPage,
   EmprendedoresPage,
   Art36Page,
+  EeffPage,
 } from "@/pages";
 
 // Components
@@ -34,6 +35,7 @@ export const AppRouter = () => {
         <Route path="006-subsidios" element={<SubsidiosPage />} />
         <Route path="directorio" element={<DirectorioPage />} />
         <Route path="art-36-2022" element={<Art36Page />} />
+        <Route path="eeff" element={<EeffPage />} />
         {/* ALUMNOS */}
         <Route
           path="academia-matematicas"
