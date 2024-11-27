@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 
 // Interfaces
-import { SubMenuItem } from "../../NavbarItems";
+import { SubMenuItem } from "@/interfaces/navbar.interface";
 
 // Components
 import { Link } from "react-router-dom";

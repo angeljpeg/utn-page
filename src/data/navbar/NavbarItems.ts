@@ -7,18 +7,7 @@ import PDF_TRANSPORTE from "/pdfs/navbar/Transporte.pdf";
 // MAESTROS
 import PDF_CONDUCTA from "/pdfs/navbar/cod_conducta.pdf";
 
-export interface SubMenuItem {
-  title: string;
-  link?: string;
-  pdf?: string;
-}
-
-export interface NavbarItem {
-  id: number;
-  menuName: string;
-  link?: string;
-  subMenu?: SubMenuItem[];
-}
+import {NavbarItem} from '@/interfaces/navbar.interface'
 
 export const NavbarItems: NavbarItem[] = [
   // INICIO
