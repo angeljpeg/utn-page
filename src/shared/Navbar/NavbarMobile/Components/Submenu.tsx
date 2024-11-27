@@ -34,7 +34,7 @@ export default function Submenu({ subMenu, isActive }: SubMenuProps) {
           key={idx}
           className="flex items-center p-2 duration-150 ease-in-out rounded-md hover:bg-gray-200 gap-x-2"
         >
-          <Link to={link} className="text-gray-700">
+          <Link to={link || "/"}  className="text-gray-700">
             {title}
           </Link>
         </li>

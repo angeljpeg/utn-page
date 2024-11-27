@@ -1,3 +1,6 @@
+import {degreesType} from '../interfaces'
+
+
 // PDFS & IMAGES
 // TI
 import PDF_TI from '/pdfs/carreras/viejoModelo/ing_TecnologiasInformacion.pdf'
@@ -12,30 +15,7 @@ import ING_ENERGIAS from '/pdfs/carreras/viejoModelo/ing_energiasRenovables.pdf'
 // AERONAUTICA
 import ING_AERONAUTICA from '/pdfs/carreras/viejoModelo/ing_aeronautica.pdf'
 
-export enum degreesTypes {
-  TSU = "tsu",
-  ING = "ing",
-  LIC = "lic",
-}
-
-export interface Iquarters {
-  quarter: number;
-  title: string;
-  subjects: string[];
-}
-
-export interface IdegreesOld {
-  id: number;
-  idForeign: number | undefined;
-  title: string;
-  img: string | undefined;
-  area: string | undefined;
-  type: degreesTypes;
-  competencies: string[];
-  quarters: Iquarters[];
-}
-
-export const degreesOld = [
+export const degreesOld : degreesType[] = [
   //TSU Tecnologías de la información
   {
     id: 0,
@@ -44,7 +24,7 @@ export const degreesOld = [
     img: "https://www.lumiun.com/blog/wp-content/uploads/technology-network-data-connection-network-marketing-cyber-security-concept.jpg",
     pdf: PDF_TI,
     area: "Desarrollo de Software Multiplataforma",
-    type: degreesTypes.TSU,
+    type: "tsu",
     competencies: [
       "Desarrollar soluciones tecnológicas para entornos Web mediante fundamentos de programación orientada a objetos, base de datos y redes de área local que atiendan las necesidades de las organizaciones.",
       "Implementar soluciones multiplataforma, en la nube y software embebido, en entornos seguros mediante la adquisición y administración de los procesos en las organizaciones.",
@@ -134,7 +114,7 @@ export const degreesOld = [
     area: "Automatización",
     img: "https://www.redmetal.es/wp-content/uploads/2021/03/img-ing-mecatronica-banner-1.jpg",
     pdf: PDF_MECATRONICA,
-    type: degreesTypes.TSU,
+    type: "tsu",
     competencies: [
       "Desarrollar y conservar sistemas automatizados y de control, utilizando tecnología adecuada, de acuerdo a normas, especificaciones técnicas y de seguridad para mejorar y mantener los procesos productivos.",
       "Implementar Sistemas de Medición y Control bajo los estándares establecidos, para el correcto funcionamiento de los procesos industriales.",
@@ -224,7 +204,7 @@ export const degreesOld = [
     img: "https://vzpumps.com/wp-content/uploads/2021/07/banner-7.jpg",
     pdf: PDF_PROCESOS,
     area: "Manufactura",
-    type: degreesTypes.TSU,
+    type: "tsu",
     competencies: [
       "Gestionar la producción a través de herramientas de la administración, para cumplir con los requerimientos del cliente.",
       "Administrar la cadena de suministro, a través de sistemas de logística, para garantizar la disposición de materiales y productos.",
@@ -317,7 +297,7 @@ export const degreesOld = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYpRAacG4n_9jeya8uM_QEPkARonQdVnumE-DxuX4CDZygdU5D1EPFn0uJs2OSoNB7w&usqp=CAU",
     area: "Clasificación Arancelaría y Despacho Aduanero",
     pdf: ING_COMERCIO,
-    type: degreesTypes.TSU,
+    type: "tsu",
     competencies: [
       "Manejo e interpretación adecuada de la tarifa aduanera.",
       "Elaboración del plan logístico.",
@@ -401,7 +381,7 @@ export const degreesOld = [
     title: "Energías Renovables",
     pdf: ING_ENERGIAS,
     area: "Calidad y Ahorro de Energía",
-    type: degreesTypes.TSU,
+    type: "tsu",
     competencies: [
       "Formular proyectos de energías renovables mediante diagnósticos energéticos y estudios especializados de los recursos naturales del entorno, para contribuir al desarrollo sustentable y al uso racional y eficiente de la energía.",
       "Dirigir proyectos de ahorro y calidad de energía eléctrica, con base en un diagnóstico energético del sistema, para contribuir al desarrollo sustentable (medio ambiente, impacto ambiental, cambio climático, contaminación), a través del uso racional y eficiente de la energía.",
@@ -494,7 +474,7 @@ export const degreesOld = [
     title: "Manufactura Aeronáutica",
     pdf: ING_AERONAUTICA,
     area: "Maquinados de Precisión",
-    type: degreesTypes.TSU,
+    type: "tsu",
     competencies: [
       "Coordinar procesos de manufactura aeronáutica a partir de la documentación técnica de ingeniería, métodos y técnicas de fabricación, herramientas de planeación y supervisión, así como la normatividad aplicable, para contribuir a la satisfacción de los clientes y al desarrollo del sector.",
       "Desarrollar la manufactura de piezas aeronáuticas mecanizadas considerando las especificaciones técnicas, de calidad, equipos y métodos de mecanizado, para contribuir al crecimiento económico y tecnológico del sector y del país.",
@@ -584,7 +564,7 @@ export const degreesOld = [
     idForeign: 14,
     title: "Mantenimiento Industrial",
     area: "Industrial",
-    type: degreesTypes.TSU,
+    type: "tsu",
     competencies: [
       "Gestionar las actividades de mantenimiento mediante la integración del plan maestro, para garantizar la operación y contribuir a la productividad de la organización.",
       "Supervisar el reemplazo o fabricación de partes de los sistemas electromecánicos en maquinaria, equipo y redes de distribución industrial empleando normas para mantener en óptimas condiciones los sistemas.",
@@ -678,7 +658,7 @@ export const degreesOld = [
     idForeign: 15,
     title: "Desarrollo de Negocios",
     area: "Mercadotecnia",
-    type: degreesTypes.TSU,
+    type: "tsu",
     competencies: [
       "Administrar el proceso de ventas mediante estrategias, técnicas y herramientas adecuadas, para contribuir al desarrollo de la organización.",
       "Administrar el proceso de compras y control de suministros a través de las políticas y procedimientos de la organización y técnicas de control de inventarios y almacenamiento para asegurar su disponibilidad.",
@@ -765,7 +745,7 @@ export const degreesOld = [
     id: 8,
     title: "Desarrollo y Gestión de Software",
     area: "",
-    type: degreesTypes.ING,
+    type: "ing",
     competencies: [
       "Construir soluciones de software y sistemas inteligentes mediante la gestión de proyectos, integración de metodologías, modelos y herramientas de desarrollo bajo la normatividad aplicable para la optimización de proyectos de investigación, innovación, desarrollo tecnológico y de emprendimiento.",
       "Dirigir proyectos de tecnologías de información, para contribuir a la productividad y logro de los objetivos estratégicos de las organizaciones utilizando las metodologías apropiadas.",
@@ -835,7 +815,7 @@ export const degreesOld = [
     id: 9,
     title: "Mecatrónica",
     area: "",
-    type: degreesTypes.ING,
+    type: "ing",
     competencies: [
       "Desarrollar proyectos de automatización y control, a través del diseño, administración y aplicación de nuevas tecnologías para satisfacer las necesidades del sector productivo.",
       "Diseñar sistemas eléctricos, mecánicos y electrónicos a través de proyectos integradores, para automatizar y controlar procesos productivos.",
@@ -902,7 +882,7 @@ export const degreesOld = [
     id: 10,
     title: "Sistemas Productivos",
     area: "",
-    type: degreesTypes.ING,
+    type: "ing",
     competencies: [
       "Administrar los recursos necesarios de la organización para asegurar la producción planeada conforme a los requerimientos del cliente.",
       "Administrar el sistema de gestión de la calidad, con un enfoque sistémico, de acuerdo a los requerimientos del cliente, considerando factores técnicos y económicos, contribuyendo al desarrollo sustentable.",
@@ -973,7 +953,7 @@ export const degreesOld = [
     id: 11,
     title: "Logística Internacional",
     area: "",
-    type: degreesTypes.ING,
+    type: "ing",
     competencies: [
       "Dirigir proyectos de negocios y de actividades logísticas, utilizando fuentes de información y técnicas especializadas, para apoyar a la competitividad y rentabilidad de la organización.",
       "Dirigir la comercialización de productos y/o servicios a través de establecer estrategias de atención a clientes y ventas, con el fin de satisfacer los requerimientos de los clientes y proveedores.",
@@ -1045,7 +1025,7 @@ export const degreesOld = [
     id: 12,
     title: "Energías Renovables",
     area: "",
-    type: degreesTypes.ING,
+    type: "ing",
     competencies: [
       "Desarrollar sistemas de energías renovables mediante el diseño de soluciones innovadoras, administrando el capital humano, recursos materiales y energéticos para mejorar la competitividad de la empresa y contribuir al desarrollo sustentable de la región.",
     ],
@@ -1112,7 +1092,7 @@ export const degreesOld = [
     id: 13,
     title: "Manufactura Aeronáutica",
     area: "",
-    type: degreesTypes.ING,
+    type: "ing",
     competencies: [
       "Diseñar procesos de manufactura aeronáutica y partes mecánicas aeronáuticas mediante metodologías de diseño, simulación y mejora continua, herramientas matemáticas, administrativas, software especializado, maquinaria y equipo de alta tecnología considerando especificaciones técnicas del producto, recursos humanos, materiales, económicos, sistemas de manufactura y normatividad aplicable para incrementar la competitividad y contribuir con la innovación tecnológica y desarrollo sustentable de la empresa.",
     ],
@@ -1179,7 +1159,7 @@ export const degreesOld = [
     id: 14,
     title: "Mantenimiento Industrial",
     area: "",
-    type: degreesTypes.ING,
+    type: "ing",
     competencies: [
       "Diseñar estrategias de mantenimiento mediante el análisis de factores humanos, tecnológicos, económicos y financieros, para la elaboración y administración del plan maestro de mantenimiento que garantice la disponibilidad y confiabilidad de planta, contribuyendo a la competitividad de la empresa.",
       "Optimizar las actividades del mantenimiento y las condiciones de operación de los equipos a través de técnicas y herramientas de confiabilidad para incrementar la eficiencia global de los equipos y reducir los costos de mantenimiento como apoyo a la sustentabilidad y la competitividad de la empresa.",
@@ -1246,7 +1226,7 @@ export const degreesOld = [
     id: 15,
     title: "Innovación de Negocios y Mercadotecnia",
     area: "",
-    type: degreesTypes.LIC,
+    type: "lic",
     competencies: [
       "Apoyar el desarrollo empresarial mediante la optimización del capital financiero y humano, para la consolidación de la organización.",
       "Evaluar sistemas de tecnologías de información para establecer acciones de mejora e innovación en las organizaciones mediante el uso de metodologías para auditoría.",

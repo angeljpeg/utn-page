@@ -100,7 +100,6 @@ const PDFDownloadButton = ({ pdfUrl }: { pdfUrl: string }) => (
   <div className="flex flex-row gap-4 my-5">
     <a
       href={pdfUrl}
-      download={pdfUrl}
       className="p-4 text-center text-white duration-200 bg-red-500 rounded-xl min-w-28 hover:bg-red-400"
     >
       <PictureAsPdfIcon />
