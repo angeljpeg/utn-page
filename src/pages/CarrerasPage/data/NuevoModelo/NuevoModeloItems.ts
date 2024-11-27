@@ -1,3 +1,6 @@
+import {degreesType} from '../interfaces'
+
+
 // PDFS & IMAGES
 // Desarrollo de Software Multiplataforma --> 0
 import PDF_DESARROLLO_MULTIPLATAFORMA from "/pdfs/carreras/nuevoModelo/desarrollo_multiplataforma.pdf";
@@ -39,7 +42,7 @@ import BANNER_SOLAR from "@/assets/images/carreras/energia/energia_solar.webp";
 import PDF_TURBO_SOLAR from "/pdfs/carreras/nuevoModelo/energia_turbo_solar.pdf";
 import BANNER_TURBO_SOLAR from "@/assets/images/carreras/energia/energia_solar.webp";
 
-export const degreesNew = [
+export const degreesNew: degreesType[] = [
   //TSU Desarrollo de Software Multiplataforma --> 0
   {
     id: 0,

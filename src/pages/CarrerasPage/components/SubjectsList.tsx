@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import { Iquarters } from "../data/ViejoModelo/ViejoModeloItems";
+import { quarterType } from "../data/interfaces";
 
 interface SubjectsListProps {
   title: string;
-  quarters: Iquarters[];
+  quarters: quarterType[];
 }
 
 export default function SubjectsList({ title, quarters }: SubjectsListProps) {
