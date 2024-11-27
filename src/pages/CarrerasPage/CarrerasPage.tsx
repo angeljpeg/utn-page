@@ -2,8 +2,7 @@ import { degreesOld, actionFields } from "./data/ViejoModelo/ViejoModeloItems";
 import { degreesNew } from "./data/NuevoModelo/NuevoModeloItems";
 
 // Components
-import { ActionFields, DegreeCompetencies, SubjectsList } from "./components";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import { ActionFields, DegreeCompetencies, SubjectsList, PDFDownloadButton } from "@/components/carreras";
 import { useHomeStore } from "@/store/RootStore";
 import { useEffect } from "react";
 import { findDegree } from "./helpers/findDegree";
@@ -94,15 +93,3 @@ export default function CarrerasPage({
     </section>
   );
 }
-
-// Reusable Component for PDF Download Button
-const PDFDownloadButton = ({ pdfUrl }: { pdfUrl: string }) => (
-  <div className="flex flex-row gap-4 my-5">
-    <a
-      href={pdfUrl}
-      className="p-4 text-center text-white duration-200 bg-red-500 rounded-xl min-w-28 hover:bg-red-400"
-    >
-      <PictureAsPdfIcon />
-    </a>
-  </div>
-);

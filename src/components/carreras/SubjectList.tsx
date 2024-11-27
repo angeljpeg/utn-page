@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import { quarterType } from "../data/interfaces";
+import { quarterType } from "@/interfaces/carrera.interface";
 
 interface SubjectsListProps {
   title: string;

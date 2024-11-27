@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui";
-import { NuevoModeloItems } from "../data/NuevoModeloItems.ts";
+import { NuevoModeloItems } from "@/data/OfertaEducativaPage/NuevoModeloItems";
 
 export default function NuevoModeloGrid() {
   return (

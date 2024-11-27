@@ -1,5 +1,5 @@
 // Componets
-import { TabsModelos } from "./Components";
+import { TabsModelos } from "@/components/OfertaEducativaPage";
 import OfertaImage from "@/assets/images/OfertaEducativa.webp";
 import { useHomeStore } from "@/store/RootStore";
 import { useEffect } from "react";

@@ -1,4 +1,4 @@
-import {degreesType} from '../interfaces'
+import {degreesType} from '@/interfaces/carrera.interface'
 
 
 // PDFS & IMAGES
