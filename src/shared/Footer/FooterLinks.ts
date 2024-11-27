@@ -1,35 +1,35 @@
 export const linksFooter = [
     {
       name: "Políticas Internas de Admón",
-      link: "http://www.utnogales.edu.mx/doc_pdf/Políticas%20Internas%20de%20Administración.pdf",
+      link: "",
     },
     {
       name: "Certificación de competencias",
-      link: "http://www.utnogales.edu.mx/certifica.html",
+      link: "/certificaciones",
     },
     {
       name: "Educación continua",
-      link: "http://www.utnogales.edu.mx/educontinua.html",
+      link: "/edu-continua",
     },
     {
       name: "Programa emprendedores",
-      link: "http://www.utnogales.edu.mx/emprende.html",
+      link: "/emprendedores",
     },
     {
       name: "Informes de Cuenta Pública",
-      link: "http://www.utnogales.edu.mx/cuentapublica.html",
+      link: "",
     },
     {
       name: "Comité de Control y Desempeño Institucional (COCODI)",
-      link: "http://www.utnogales.edu.mx/cocodi.html",
+      link: "",
     },
     {
       name: "LGCG Artículos 60 al 63",
-      link: "http://www.utnogales.edu.mx/LGCG.html",
+      link: "",
     },
     {
       name: "Aviso de Privacidad",
-      link: "http://www.utnogales.edu.mx/avisoprivacidad.html",
+      link: "",
     },
     {
       name: "Plataforma Nacional de Transparencia",
