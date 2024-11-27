@@ -21,7 +21,7 @@ export const useHomeStore = create<HomeStore>((set) => ({
   component: undefined,
   banner: "",
   updateHome: (newHome) => set({ isHome: newHome }),
-  updateTitle: (newTitle) => set({ title: newTitle }),
-  updateComponent: (newComponent) => set({ component: newComponent }),
+  updateTitle: (newTitle) => set({ title: newTitle, component: undefined }),
+  updateComponent: (newComponent) => set({ component: newComponent, title: undefined }),
   updateBanner: (newBanner) => set({ banner: newBanner }),
 }));

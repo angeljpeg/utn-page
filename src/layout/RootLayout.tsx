@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 // Components
 import { Footer, Navbar, ScrollToUp, Header } from "@/shared";
@@ -12,14 +12,26 @@ import slide2 from "@/assets/images/slider/uni2.webp";
 import slide3 from "@/assets/images/slider/uni3.webp";
 import slide4 from "@/assets/images/slider/uni4.webp";
 import slide5 from "@/assets/images/slider/uni5.webp";
+import { useEffect } from "react";
 
 const SLIDES = [slide1, slide2, slide3, slide4, slide5];
 
 export default function RootLayout() {
   const isHome = useHomeStore((state) => state.isHome);
+  const updateHome = useHomeStore((state) => state.updateHome);
   const title = useHomeStore((state) => state.title);
   const component = useHomeStore((state) => state.component);
   const banner = useHomeStore((state) => state.banner);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      return updateHome(true);
+    }
+
+    updateHome(false);
+  }, [updateHome, location]);
 
   return (
     <>
