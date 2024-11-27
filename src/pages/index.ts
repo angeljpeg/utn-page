@@ -6,4 +6,5 @@ export const CarrerasPage = React.lazy(() => import('./CarrerasPage/CarrerasPage
 export const NotFoundPage = React.lazy(() => import("./NotFoundPage/NotFoundPage"))
 export const LegislacionUniversitariaPage = React.lazy(() => import('./LegislacionUniversitaria/LegislacionUniversitariaPage'))
 export const CertificacionesPage = React.lazy(() => import('./CertificacionesPage/CertificacionesPage'))
+export const CuadriculaLogosPage = React.lazy(() => import('./CuadriculaLogosPage/CuadriculaLogosPage'))
 export const TestPage = React.lazy(() => import("./TestPage/TestPage"))
