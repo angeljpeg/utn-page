@@ -8,16 +8,17 @@ import {
   FooterHome,
   Objetivo,
   ResumenAcademico,
+  Header,
 } from "@/components/Home";
 import { TabsModelos } from "@/components/OfertaEducativaPage";
 
 export default function HomePage() {
   const updateHome = useHomeStore((state) => state.updateHome);
   const updateComponent = useHomeStore((state) => state.updateComponent);
-  
+
   useEffect(() => {
     updateHome(true);
-    updateComponent(<h1>hola mundo</h1>);
+    updateComponent(<Header />);
   }, [updateHome, updateComponent]);
 
   return (
