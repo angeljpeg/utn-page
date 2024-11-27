@@ -8,4 +8,5 @@ export const LegislacionUniversitariaPage = React.lazy(() => import('./Legislaci
 export const CertificacionesPage = React.lazy(() => import('./CertificacionesPage/CertificacionesPage'))
 export const CuadriculaLogosPage = React.lazy(() => import('./CuadriculaLogosPage/CuadriculaLogosPage'))
 export const EducacionContinuaPage = React.lazy(() => import('./EducacionContinuaPage/EducacionContinuaPage'))
+export const SubsidiosPage = React.lazy(() => import('./SubsidiosPage/SubsidiosPage'))
 export const TestPage = React.lazy(() => import("./TestPage/TestPage"))

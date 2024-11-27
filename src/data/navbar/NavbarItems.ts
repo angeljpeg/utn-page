@@ -5,7 +5,7 @@ import PDF_CONVOCATORIA from "/pdfs/navbar/convocatoria.pdf";
 import PDF_INDUCCION from "/pdfs/navbar/induccion.pdf";
 import PDF_TRANSPORTE from "/pdfs/navbar/Transporte.pdf";
 // MAESTROS
-import PDF_CONDUCTA from '/pdfs/navbar/cod_conducta.pdf'
+import PDF_CONDUCTA from "/pdfs/navbar/cod_conducta.pdf";
 
 export interface SubMenuItem {
   title: string;
@@ -134,6 +134,11 @@ export const NavbarItems: NavbarItem[] = [
   {
     id: 7,
     menuName: "UNIVERSIDAD",
-    subMenu: []
-  }
+    subMenu: [
+      {
+        title: "SUBSIDIOS",
+        link: "/006-subsidios",
+      },
+    ],
+  },
 ];

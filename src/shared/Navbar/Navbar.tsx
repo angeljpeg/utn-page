@@ -9,7 +9,7 @@ import { Contacto } from "./Components";
 
 
 // Data
-import { NavbarItems } from "./NavbarItems";
+import { NavbarItems } from "@/data/navbar/NavbarItems";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
