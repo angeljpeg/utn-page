@@ -52,7 +52,7 @@ export default function Carousel({ urls }: { urls: string[] }) {
     `w-3 h-3 rounded-full duration-300 p-2 border ${index === imageIndex ? "bg-green-500/80 scale-110 border-green-500" : "bg-gray-400/80 scale-75 border-white"}`;
 
   return (
-    <div className="relative flex items-center justify-center w-full h-screen overflow-hidden bg-black">
+    <div className="relative flex items-center justify-center w-full h-[115vh] overflow-hidden bg-black">
       <div className="relative z-0 w-full h-full">
         <AnimatePresence custom={direction}>
           <motion.img
