@@ -16,7 +16,7 @@ export default function OfertaEducativaPage() {
 
   return (
     <section className="w-full">
-      <section className="">
+      <section className="py-24">
         <TabsModelos />
       </section>
     </section>

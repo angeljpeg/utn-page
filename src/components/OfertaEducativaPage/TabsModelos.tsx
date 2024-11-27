@@ -18,7 +18,7 @@ function TabsComponent() {
   };
 
   return (
-    <section className="py-24">
+    <>
       {/* Tabs */}
       <div className="flex justify-center p-4 mx-auto mb-8 space-x-4 shadow-lg bg-stone-200 rounded-3xl w-fit">
         {tabs.map((tab) => (
@@ -53,7 +53,7 @@ function TabsComponent() {
           </motion.div>
         </AnimatePresence>
       </div>
-    </section>
+    </>
   );
 }
 
