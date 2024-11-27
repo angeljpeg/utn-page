@@ -136,6 +136,10 @@ export const NavbarItems: NavbarItem[] = [
     menuName: "UNIVERSIDAD",
     subMenu: [
       {
+        title: "DIRECTORIO",
+        link: "/directorio",
+      },
+      {
         title: "SUBSIDIOS",
         link: "/006-subsidios",
       },

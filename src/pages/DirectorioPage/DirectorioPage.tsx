@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useHomeStore } from "@/store/RootStore";
+
 import { CardTable } from "@/components/Directorio";
 import {
   directoresArea,
@@ -6,7 +9,16 @@ import {
   rector,
 } from "@/data/Directorio/directorioItems";
 
+import OfertaImage from "@/assets/images/OfertaEducativa.webp";
+
 export default function DirectorioPage() {
+  const updateBanner = useHomeStore((state) => state.updateBanner);
+  const updateTitle = useHomeStore((state) => state.updateTitle);
+
+  useEffect(() => {
+    updateBanner(OfertaImage);
+    updateTitle("DIRECTORIO");
+  }, [updateBanner, updateTitle]);
   return (
     <section className="w-full">
       <main className="min-h-screen pt-24">
