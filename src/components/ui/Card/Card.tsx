@@ -2,6 +2,7 @@ import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import LinkGenerator from "../LinkGenerator";
 
 interface CardProps {
   icon: OverridableComponent<SvgIconTypeMap>; // El ícono que se va a mostrar
@@ -10,6 +11,7 @@ interface CardProps {
   links?: { title: string; url: string }[]; // Array de links adicionales (opcional)
   customStyles?: string; // Estilos personalizados adicionales (opcional)
   extraText?: string; // Un espacio de Text extra para los links
+  pdf?: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -19,8 +21,8 @@ const Card: React.FC<CardProps> = ({
   links,
   customStyles,
   extraText,
+  pdf,
 }) => {
-
   return (
     <motion.div
       className={`flex items-center justify-start p-5 gap-y-4 cursor-pointer rounded-3xl ${customStyles}  ${
@@ -43,16 +45,12 @@ const Card: React.FC<CardProps> = ({
 
       {title && (
         <div className="flex items-center justify-center w-full text-center md:text-start">
-          {titleLink ? (
-            <Link
-              to={titleLink}
-              className="block mb-2 text-2xl font-semibold text-black transition duration-300 hover:text-green-600"
-            >
-              {title}
-            </Link>
-          ) : (
-            <span className="block mb-2 text-xl font-semibold text-center">{title}</span>
-          )}
+          <LinkGenerator
+            title={title}
+            link={titleLink}
+            pdf={pdf}
+            className="block mb-2 text-2xl font-semibold text-center text-black transition duration-300 text-balance hover:text-green-600"
+          />
         </div>
       )}
 
