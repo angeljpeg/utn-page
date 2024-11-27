@@ -28,11 +28,11 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen2,
-    url: "contraloria-social"
+    url: "/contraloria-social"
   },
   {
     imagen: Imagen3,
-    url: "igualdad"
+    url: "/igualdad"
   },
   {
     imagen: Imagen4,
@@ -40,7 +40,7 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen5,
-    url: "plan-anual"
+    url: "/plan-anual"
   },
   {
     imagen: Imagen6,
@@ -48,7 +48,7 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen7,
-    url: "tramites-servicios"
+    url: "/tramites-servicios"
   },
   {
     imagen: Imagen8,
@@ -76,7 +76,7 @@ export const CuadriculaItems = [
   },
   {
     imagen: Imagen14,
-    url: "certificaciones"
+    url: "/certificaciones"
   },
   {
     imagen: Imagen15,
