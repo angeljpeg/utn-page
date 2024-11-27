@@ -20,10 +20,15 @@ function TabsComponent() {
   return (
     <>
       {/* Tabs */}
-      <div className="flex justify-center p-4 mx-auto mb-8 space-x-4 shadow-lg bg-stone-200 rounded-3xl w-fit">
+      <div
+        role="tablist"
+        className="flex justify-center p-4 mx-auto mb-8 space-x-4 shadow-lg bg-stone-200 rounded-3xl w-fit"
+      >
         {tabs.map((tab) => (
           <button
             key={tab.id}
+            aria-selected={activeTab === tab.id}
+            role="tab"
             onClick={() => setActiveTab(tab.id)}
             className={`px-4 py-2 text-lg font-semibold rounded-lg duration-500  ${
               activeTab === tab.id

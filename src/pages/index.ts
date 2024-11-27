@@ -42,5 +42,11 @@ export const EeffPage = React.lazy(() => import("./EeffPage/EeffPage"));
 export const IgualdadPage = React.lazy(
   () => import("./IgualdadPage/IgualdadPage")
 );
+export const AdquisicionesPage = React.lazy(
+  () => import("./AdquisicionesPage/AdquisicionesPage")
+);
+export const InformesMatriculaPage = React.lazy(
+  () => import("./InformesMatriculaPage/InformesMatriculaPage")
+);
 
 export const TestPage = React.lazy(() => import("./TestPage/TestPage"));

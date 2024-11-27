@@ -7,8 +7,9 @@ import PDF_TRANSPORTE from "/pdfs/navbar/Transporte.pdf";
 // MAESTROS
 import PDF_CONDUCTA from "/pdfs/navbar/cod_conducta.pdf";
 // UNIVERSIDAD
-import PDF_CODIGO_DE_ETICA_ESTADO_2022 from '/pdfs/navbar/codigo_etica_estado_2022.pdf'
-import PDF_Informe_Anual_de_Actividades_2021_2022 from '/pdfs/navbar/Informe_Anual_de_Actividades_2021_2022.pdf'
+import PDF_CODIGO_DE_ETICA_ESTADO_2022 from "/pdfs/navbar/codigo_etica_estado_2022.pdf";
+import INFORME_ANUAL_DE_ACTIVIDADES_2023 from "/pdfs/navbar/INFORME_ANUAL_DE_ACTIVIDADES_2023.pdf";
+import PDF_Informe_Anual_de_Actividades_2021_2022 from "/pdfs/navbar/Informe_Anual_de_Actividades_2021_2022.pdf";
 
 import { NavbarItem } from "@/interfaces/navbar.interface";
 
@@ -152,6 +153,10 @@ export const NavbarItems: NavbarItem[] = [
         pdf: PDF_Informe_Anual_de_Actividades_2021_2022,
       },
       {
+        title: "INFORME ANUAL DE ACTIVIDADES 2023",
+        pdf: INFORME_ANUAL_DE_ACTIVIDADES_2023,
+      },
+      {
         title: "COD. ETICA",
         pdf: PDF_CODIGO_DE_ETICA_ESTADO_2022,
       },
@@ -166,6 +171,14 @@ export const NavbarItems: NavbarItem[] = [
       {
         title: "LEGISLACION UNIVERSITARIA",
         link: "/legislacion",
+      },
+      {
+        title: "ADQUISICIONES",
+        link: "/adquisiciones",
+      },
+      {
+        title: "INFORMES MATRICULA",
+        link: "/informes-matricula",
       },
     ],
   },
