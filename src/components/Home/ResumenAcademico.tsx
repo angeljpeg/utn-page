@@ -7,8 +7,8 @@ export default function ResumenAcademico() {
         Resumen Académico
       </h2>
       <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {info.map((item) => (
-          <li className="flex flex-col justify-between p-4">
+        {info.map((item, idx) => (
+          <li key={idx} className="flex flex-col justify-between p-4">
             <p className="text-6xl font-bold text-center text-green-500">
               {item.data}
             </p>

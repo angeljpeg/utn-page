@@ -21,3 +21,6 @@ export const ContraloriaSocialPage = React.lazy(() => import("./ContraloriaSocia
 export const Prodep2020Page = React.lazy(() => import("./ContraloriaSocial/Prodep2020"))
 export const Prodep2023Page = React.lazy(() => import("./ContraloriaSocial/Prodep2023"))
 export const Pfce2020Page = React.lazy(() => import("./ContraloriaSocial/Pfce2020Page"))
+export const EeffPage = React.lazy(() => import("./EeffPage/EeffPage"))
+export const AdquisicionesPage = React.lazy(() => import("./AdquisicionesPage/AdquisicionesPage"))
+export const InformesMatriculaPage = React.lazy(() => import("./InformesMatriculaPage/InformesMatriculaPage"))

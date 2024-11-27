@@ -2,6 +2,8 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import SwitchAccountIcon from "@mui/icons-material/SwitchAccount";
 import ArticleIcon from "@mui/icons-material/Article";
 
+import INFORME_ANUAL_DE_ACTIVIDADES_2023 from '/pdfs/navbar/INFORME_ANUAL_DE_ACTIVIDADES_2023.pdf'
+
 export const headerItems = [
   {
     title: "Certificación de competencias",
@@ -16,6 +18,6 @@ export const headerItems = [
   {
     title: "Informe Anual de Resultados 2023",
     icon: ArticleIcon,
-    pdf: "",
+    pdf: INFORME_ANUAL_DE_ACTIVIDADES_2023,
   },
 ];
