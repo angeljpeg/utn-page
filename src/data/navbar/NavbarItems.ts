@@ -180,6 +180,10 @@ export const NavbarItems: NavbarItem[] = [
         title: "INFORMES MATRICULA",
         link: "/informes-matricula",
       },
+      {
+        title: "EEFF DICTAMINADOS 2022",
+        link: "/eeff",
+      },
     ],
   },
 ];
