@@ -29,7 +29,7 @@ export default function PdfAccordion({ index, title, files }: AccordionProps) {
     >
       {/* Encabezado del acordeón */}
       <div
-        className="flex items-center justify-between p-5 bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer hover:shadow-md"
+        className="flex items-center justify-between gap-3 p-5 bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer hover:shadow-md"
         onClick={() => toggleAccordion(index)}
         role="button"
         aria-expanded={activeIndex === index}
