@@ -1,44 +1,41 @@
+import Imagen from "../../assets/img/logosCuadricula/16.webp";
+
 export default function EducacionContinua() {
   return (
     <section className="w-full">
       <main className="min-h-screen pt-24">
-        <div>
-          <h2>Educación continua y Servicios Tecnológicos</h2>
-          <h3>Certificaciones de competencia</h3>
-          <p>
-            En 2013 nos acreditamos como una Entidad de Certificación y
-            Evaluación de Competencias Laborales, la cual tiene la facultad de
-            capacitar, evaluar y certificar a las personas en algún estándar de
-            Competencia Laboral que estén inscritos en el Registro Nacional de
-            Estándares de Competencia Laboral (RENEC) del Consejo Nacional de
-            Normalización y Certificación de Competencias Laborales (CONOCER).
-            Entidad de Certificación y Evaluación. Universidad Tecnológica de
-            Nogales, Sonora.
-          </p>
-        </div>
-        {/* Objetivo de la ECST */}
-        <div className="w-full bg-gray-100 h-fit">
-          <div className="items-center justify-center block w-full gap-4 px-6 py-12 m-auto h-fit lg:flex lg:w-3/4 lg:px-0">
-            <div className="w-full h-fit lg:w-1/2">
-              <h2 className="pb-3 text-3xl font-medium text-gray-900">
-                Objetivo
-              </h2>
-              <p className="mb-4">
-                Contribuir al desarrollo de la comunidad, fortaleciendo la
-                fuerza laboral, mediante capacitación, cursos, seminarios,
-                asistencia técnica y evaluación de competencias profesionales.
-                La Universidad Tecnológica cuenta con registro ante la
-                Secretaria de Trabajo y Previsión Social como Agente
-                capacitador, conoce nuestro catálogo de Cursos para tu empresa,
-                organización.
-              </p>
-            </div>
-            <div className="mt-4 w-[300px] h-[300px] lg:mt-0 lg:w-[350px] lg:h-[350px] md:w-[400px] md:h-[400px] md:m-auto">
+        <div className="flex justify-center w-full mt-10 mb-12 h-fit">
+          <div className="w-full px-4 h-fit lg:w-3/4 md:w-11/12">
+            <h2 className="mb-2 text-base text-center lg:text-xl md:text-lg text-neutral-500">
+              Servicios
+            </h2>
+            <h3 className="mb-10 text-2xl font-medium text-center lg:text-4xl md:text-3xl text-neutral-900">
+              Educación continua y Servicios Tecnológicos
+            </h3>
+            <div className="lg:flex lg:items-center">
               <img
-                className="object-cover w-full h-full"
-                src="https://picsum.photos/900/900"
-                alt="Foto"
+                src={Imagen}
+                alt="Imagen"
+                className="float-left mr-4 h-30 w-30 min-w-fit lg:h-full lg:w-20"
+                loading="lazy"
               />
+              <div>
+                <p className="text-lg italic font-medium text-neutral-800">
+                  Objetivo de ECST
+                </p>
+                <p className="mb-2 text-justify">
+                  Contribuir al desarrollo de la comunidad, fortaleciendo la
+                  fuerza laboral, mediante capacitación, cursos, seminarios,
+                  asistencia técnica y evaluación de competencias profesionales.
+                  La Universidad Tecnológica cuenta con registro ante la
+                  Secretaria de Trabajo y Previsión Social como Agente
+                  capacitador, conoce nuestro catálogo de Cursos para tu
+                  empresa, organización.
+                </p>
+                <p className="text-neutral-800">
+                  <span className="font-medium">Más informes en:</span> capacitacion@utnogales.edu.mx
+                </p>
+              </div>
             </div>
           </div>
         </div>

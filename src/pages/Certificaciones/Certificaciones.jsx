@@ -1,4 +1,4 @@
-import { FaRegCheckCircle } from "react-icons/fa";
+import { MdHomeRepairService } from "react-icons/md";
 import Imagen from "../../assets/img/logosCuadricula/14.webp";
 
 export default function Certificaciones() {
@@ -45,14 +45,14 @@ export default function Certificaciones() {
           </h3>
           <ul>
             <li className="flex items-center gap-4 pb-4">
-              <FaRegCheckCircle className="text-2xl text-neutral-600" />
+              <MdHomeRepairService className="text-2xl text-neutral-600" />
               <p>
                 Cursos de Capacitación alineados a Estándares de Competencia
                 Laboral
               </p>
             </li>
             <li className="flex items-center gap-4">
-              <FaRegCheckCircle className="text-2xl text-neutral-600" />
+              <MdHomeRepairService className="text-2xl text-neutral-600" />
               <p>
                 Preparación, Evaluación y Certificación de las competencias de
                 las personas
@@ -69,25 +69,29 @@ export default function Certificaciones() {
             <ul className="grid grid-cols-1 gap-2 lg:grid-cols-4 md:grid-cols-2">
               <li className="flex flex-col items-center p-4 bg-green-100 rounded-lg">
                 <p className="text-lg font-medium">EC0076</p>
-                <p>
+                <p className="text-center">
                   Evaluación de competencias de candidatos con base en
                   estándares de competencia.
                 </p>
               </li>
               <li className="flex flex-col items-center p-4 bg-green-100 rounded-lg">
                 <p className="text-lg font-medium">EC0217.01</p>
-                <p>
+                <p className="text-center">
                   Impartición de cursos de formación del capital humano de
                   manera presencial grupal.
                 </p>
               </li>
               <li className="flex flex-col items-center p-4 bg-green-100 rounded-lg">
                 <p className="text-lg font-medium">C0586.01</p>
-                <p>Instalación de sistemas fotovoltaicos en residencia.</p>
+                <p className="text-center">
+                  Instalación de sistemas fotovoltaicos en residencia.
+                </p>
               </li>
               <li className="flex flex-col items-center p-4 bg-green-100 rounded-lg">
                 <p className="text-lg font-medium">EC0772</p>
-                <p>Evaluación del aprendizaje con enfoque en competencias</p>
+                <p className="text-center">
+                  Evaluación del aprendizaje con enfoque en competencias
+                </p>
               </li>
             </ul>
           </div>
@@ -101,16 +105,19 @@ export default function Certificaciones() {
             <ul>
               <li className="flex items-center gap-4 pb-4">
                 <p>
-                  1.- Identifica la función en la que te deseas certificar, consulta
-                  el catálogo completo de los Estándares de Competencia en
-                  www.conocer.gob.mx.
+                  1.- Identifica la función en la que te deseas certificar,
+                  consulta el catálogo completo de los Estándares de Competencia
+                  en <span className="font-semibold">www.conocer.gob.mx.</span>
                 </p>
               </li>
               <li className="flex items-center gap-4">
                 <p>
-                  2.- Envía tu nombre, celular y estándar de competencia que deseas
-                  al correo electrónico certificaciones@utnogales.edu.mx y una
-                  persona se pondrá en contacto contigo.
+                  2.- Envía tu nombre, celular y estándar de competencia que
+                  deseas al correo electrónico{" "}
+                  <span className="font-semibold">
+                    certificaciones@utnogales.edu.mx
+                  </span>{" "}
+                  y una persona se pondrá en contacto contigo.
                 </p>
               </li>
             </ul>
