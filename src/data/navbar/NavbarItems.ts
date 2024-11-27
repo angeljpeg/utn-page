@@ -163,6 +163,10 @@ export const NavbarItems: NavbarItem[] = [
         title: "ART 36 2022",
         link: "/art-36-2022",
       },
+      {
+        title: "LEGISLACION UNIVERSITARIA",
+        link: "/legislacion",
+      },
     ],
   },
 ];
