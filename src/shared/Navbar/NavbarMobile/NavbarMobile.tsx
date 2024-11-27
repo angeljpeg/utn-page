@@ -3,7 +3,7 @@ import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // Interfaces
-import { NavbarItem } from "../NavbarItems";
+import { NavbarItem } from "@/interfaces/navbar.interface";
 
 // Components
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";

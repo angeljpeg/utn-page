@@ -14,6 +14,11 @@ import {
   CuadriculaLogosPage,
   EducacionContinuaPage,
   SubsidiosPage,
+  DirectorioPage,
+  AcademiaMatematicasPage,
+  BolsaTrabajoPage,
+  EmprendedoresPage,
+  Art36Page,
 } from "@/pages";
 
 // Components
@@ -24,10 +29,21 @@ export const AppRouter = () => {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<HomePage />} />
         <Route path="legislacion" element={<LegislacionUniversitariaPage />} />
-        <Route path="certificaciones" element={<CertificacionesPage />} />
-        <Route path="edu-continua" element={<EducacionContinuaPage />} />
         <Route path="algunos-logos" element={<CuadriculaLogosPage />} />
+        {/* UNIVERSIDAD */}
         <Route path="006-subsidios" element={<SubsidiosPage />} />
+        <Route path="directorio" element={<DirectorioPage />} />
+        <Route path="art-36-2022" element={<Art36Page />} />
+        {/* ALUMNOS */}
+        <Route
+          path="academia-matematicas"
+          element={<AcademiaMatematicasPage />}
+        />
+        {/* SERVICIOS */}
+        <Route path="edu-continua" element={<EducacionContinuaPage />} />
+        <Route path="certificaciones" element={<CertificacionesPage />} />
+        <Route path="bolsa-trabajo" element={<BolsaTrabajoPage />} />
+        <Route path="emprendedores" element={<EmprendedoresPage />} />
 
         {/* CARRERAS */}
         <Route path="carreras" element={<CarrerasLayout />}>

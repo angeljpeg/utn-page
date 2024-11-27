@@ -23,7 +23,7 @@ export default function Navbar() {
   }, []);
 
   const headerBgClass =
-    scrollPosition < 250 ? "bg-white/5 text-white" : "bg-white text-black"; //
+    scrollPosition < 250 ? "text-white" : "bg-white text-black"; //
 
   return (
     <header

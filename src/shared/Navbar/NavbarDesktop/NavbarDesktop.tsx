@@ -1,11 +1,11 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 // Components
-import { MenuLink, Submenu} from './Components'
-import { Link} from 'react-router-dom'
+import { MenuLink, Submenu } from "./Components";
+import { Link } from "react-router-dom";
 // Interface
-import { NavbarItem } from "../NavbarItems";
+import { NavbarItem } from "@/interfaces/navbar.interface";
 
 interface MenuProps {
   menu: NavbarItem;
@@ -17,15 +17,14 @@ export default function NavbarDesktop({ menu }: MenuProps) {
   const { link, menuName, subMenu } = menu || {};
   const hasSubmenu = subMenu ? true : false;
 
-  const toggleIsHover = useCallback(() => {
-    setIsHover((prev) => !prev);
-  }, []);
+  const handleMouseEnter = () => setIsHover(true);
+  const handleMouseLeave = () => setIsHover(false);
 
   return (
     <motion.li
       className="group/link"
-      onHoverStart={toggleIsHover}
-      onHoverEnd={toggleIsHover}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       role="menuitem"
       aria-haspopup={hasSubmenu}
       aria-expanded={isHover}

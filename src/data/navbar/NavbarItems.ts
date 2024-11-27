@@ -6,19 +6,11 @@ import PDF_INDUCCION from "/pdfs/navbar/induccion.pdf";
 import PDF_TRANSPORTE from "/pdfs/navbar/Transporte.pdf";
 // MAESTROS
 import PDF_CONDUCTA from "/pdfs/navbar/cod_conducta.pdf";
+// UNIVERSIDAD
+import PDF_CODIGO_DE_ETICA_ESTADO_2022 from '/pdfs/navbar/codigo_etica_estado_2022.pdf'
+import PDF_Informe_Anual_de_Actividades_2021_2022 from '/pdfs/navbar/Informe_Anual_de_Actividades_2021_2022.pdf'
 
-export interface SubMenuItem {
-  title: string;
-  link?: string;
-  pdf?: string;
-}
-
-export interface NavbarItem {
-  id: number;
-  menuName: string;
-  link?: string;
-  subMenu?: SubMenuItem[];
-}
+import { NavbarItem } from "@/interfaces/navbar.interface";
 
 export const NavbarItems: NavbarItem[] = [
   // INICIO
@@ -136,8 +128,40 @@ export const NavbarItems: NavbarItem[] = [
     menuName: "UNIVERSIDAD",
     subMenu: [
       {
+        title: "DIRECTORIO",
+        link: "/directorio",
+      },
+      {
+        title: "SIST. DIRECTORES",
+        link: "https://siageescolar.net/siage_utnogales/index.aspx",
+      },
+      {
+        title: "ESCOLARES",
+        link: "https://siageescolar.net/siage_utnogales/index.aspx",
+      },
+      {
+        title: "SIST. GESTION",
+        link: "https://szurqtzgnvvrzkzwj4ybla.on.drv.tw/SGOE%20UTN/acceder.html",
+      },
+      {
         title: "SUBSIDIOS",
         link: "/006-subsidios",
+      },
+      {
+        title: "INFORME ANUAL DE ACTIVIDADES 2021-2022",
+        pdf: PDF_Informe_Anual_de_Actividades_2021_2022,
+      },
+      {
+        title: "COD. ETICA",
+        pdf: PDF_CODIGO_DE_ETICA_ESTADO_2022,
+      },
+      {
+        title: "ISO 21001 : 2018",
+        link: "http://www.utnogales.edu.mx/sgoeutn/sgoe.html",
+      },
+      {
+        title: "ART 36 2022",
+        link: "/art-36-2022",
       },
     ],
   },
